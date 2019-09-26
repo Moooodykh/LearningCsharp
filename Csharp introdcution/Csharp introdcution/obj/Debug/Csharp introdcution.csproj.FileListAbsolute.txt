@@ -1,0 +1,6 @@
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe.config
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.csprojResolveAssemblyReference.cache
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.pdb
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.exe
+c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.pdb
