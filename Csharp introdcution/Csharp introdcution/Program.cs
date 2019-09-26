@@ -207,7 +207,6 @@
 
         /**/  //Lesson9 
               //Comments
-
         /*
          sampleclass
 /// <summary>
@@ -218,6 +217,7 @@ public class sampleclass
 
 }
 */
+
         /**/  //Lesson10 
               //IF Statment
               /*
@@ -249,10 +249,9 @@ public class sampleclass
 
                       }
               */
-              /**/  //Lesson11 
+
+        /**/  //Lesson11 
                     //SWITCH Statment
-
-
         /*  Console.WriteLine("Please enter a number");
                   string userInput = Console.ReadLine();
                   int userNumber = int.Parse(userInput);
@@ -356,96 +355,95 @@ public class sampleclass
                 }
                 Console.WriteLine();
                 */
-        
+
         // example coffe machine with do/while loop (without GOTO statement)
+
         // this code is fixed :)
-        int coffeCost = 0;
-        // we use this label to jump to this point
-
-
-        Console.WriteLine("Welcome to our shop, choose your size of coffe");
-        int userChoise;
-        string userDecision = "";
-        do
-        {
-            do
-            {
-                Console.WriteLine("1- Small, 2- Medium, 3- Large");
-                userChoise = int.Parse(Console.ReadLine());
-
-                switch (userChoise)
+        /*
+                int coffeCost = 0;
+                Console.WriteLine("Welcome to our shop, choose your size of coffe");
+                int userChoise;
+                string userDecision = "";
+                do
                 {
-                    case 1:
-                        coffeCost += 1;
-                        break;
+                    do
+                    {
+                        Console.WriteLine("1- Small, 2- Medium, 3- Large");
+                        userChoise = int.Parse(Console.ReadLine());
 
-                    case 2:
-                        coffeCost += 2;
-                        break;
+                        switch (userChoise)
+                        {
+                            case 1:
+                                coffeCost += 1;
+                                break;
 
-                    case 3:
-                        coffeCost += 3;
-                        break;
+                            case 2:
+                                coffeCost += 2;
+                                break;
 
-                    default:
-                        Console.WriteLine("Your choice is invalid");
-                        break;
-                }
-            } while (userChoise != 1 && userChoise != 2 && userChoise != 3);
+                            case 3:
+                                coffeCost += 3;
+                                break;
 
-            Console.WriteLine("Do you want to buy another coffe? answer by 'YES' or 'NO' please ");
-            userDecision = Console.ReadLine();
-            do
-            {
-                if (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no")
-                {
-                    Console.WriteLine("Your answer is INVALID. answer by 'YES' or 'NO' please ");
-                }
-            } while (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no");
-            
+                            default:
+                                Console.WriteLine("Your choice is invalid");
+                                break;
+                        }
+                    } while (userChoise != 1 && userChoise != 2 && userChoise != 3);
 
-        } while (userDecision.ToLower() == "yes");
+                    Console.WriteLine("Do you want to buy another coffe? answer by 'YES' or 'NO' please ");
+                    userDecision = Console.ReadLine();
+                    do
+                    {
+                        if (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no")
+                        {
+                            Console.WriteLine("Your answer is INVALID. answer by 'YES' or 'NO' please ");
+                        }
+                    } while (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no");
 
 
-        Console.WriteLine("Thank you for shopping with us");
-        Console.WriteLine(" Your bill amount is : {0} Euro ", coffeCost);
+                } while (userDecision.ToLower() == "yes");
 
-     
+
+                Console.WriteLine("Thank you for shopping with us");
+                Console.WriteLine(" Your bill amount is : {0} Euro ", coffeCost);
+
+             */
 
 
         /**/  //Lesson14
               //DO -  WHILE loop
               /*
-                     string userChoice = string.Empty;
+                                  string userChoice = string.Empty;
 
-                     do
-                     {
-                         Console.WriteLine("Please enter your target number");
-                         int target = 0;
-                         int userInput = int.Parse(Console.ReadLine());
+                                  do
+                                  {
+                                      Console.WriteLine("Please enter your target number");
+                                      int target = 0;
+                                      int userInput = int.Parse(Console.ReadLine());
 
-                         while (target <= userInput)
-                         {
-                             Console.Write("{0} ", target);
-                             target += 2;
-                         }
-                         Console.WriteLine();
+                                      while (target <= userInput)
+                                      {
+                                          Console.Write("{0} ", target);
+                                          target += 2;
+                                      }
+                                      Console.WriteLine();
 
-                         do
-                         {
-                             Console.WriteLine("Do you want to continue - YES or NO");
-                             userChoice = Console.ReadLine();
-                             if (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no")
-                             {
-                                 Console.WriteLine("your choice is INVALID, type -  YES or NO");
-                             }
+                                      do
+                                      {
+                                          Console.WriteLine("Do you want to continue - YES or NO");
+                                          userChoice = Console.ReadLine();
+                                          if (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no")
+                                          {
+                                              Console.WriteLine("your choice is INVALID, type -  YES or NO");
+                                          }
 
-                         } while (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no");
-                     } 
+                                      } while (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no");
+                                  } 
 
 
-                     while (userChoice == "yes") ;
-                    */
+                                  while (userChoice == "yes") ;
+                                 */
     }
 }
 

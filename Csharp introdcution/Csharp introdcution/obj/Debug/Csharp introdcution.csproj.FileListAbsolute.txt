@@ -4,3 +4,6 @@ c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Cshar
 c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.pdb
 c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.exe
 c:\users\station\documents\visual studio 2015\Projects\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.pdb
+C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe.config
+C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.exe
+C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.pdb
