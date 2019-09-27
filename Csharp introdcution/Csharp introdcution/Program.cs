@@ -511,6 +511,7 @@
 
         /**/  //Lesson16
               //METHODS
+              // calling methods from MAIN
          /*
               // calling instance methods
         Program p = new Program();
@@ -533,7 +534,8 @@
 
     /**/  //Lesson16
           //METHODS
-          /*
+          // making methods
+/*
               // instance method with no parameters
               // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers()
               public void Evennumbers()
