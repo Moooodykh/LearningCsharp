@@ -5,6 +5,8 @@
     {
         static void Main()
         {
+
+
         /**/    //Lesson1 
 
         /*------
@@ -509,9 +511,60 @@
 
         /**/  //Lesson16
               //METHODS
-
+         /*
+              // calling instance methods
+        Program p = new Program();
+        // printing even numbers from 0 to number 20
+        Console.WriteLine("------Calling instance method without parameters----");
+        Console.WriteLine("------printing even numbers from 0 to number 20----");
+        p.Evennumbers();
+        // printing even numbers from 0 to number that the user put
+        Console.WriteLine("------Calling instance method with parameters----");
+        Console.WriteLine("------printing even numbers from 0 to number 30----");
+        p.Evennumbers(30);
+        Console.WriteLine("------Calling static method with parameters----");
+        Console.WriteLine("------Static method----");
+        // calling static method 
+        int sum = Program.Addnumbers(14, 22);
+        Console.WriteLine("Sum : {0}",sum);
+        */
 
     }
+
+    /**/  //Lesson16
+          //METHODS
+          /*
+              // instance method with no parameters
+              // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers()
+              public void Evennumbers()
+              {
+                  int start = 0;
+                  while (start < 20)
+                  {
+                      Console.WriteLine(start);
+                      start += 2;
+                  }
+
+              }
+              // instance method with parameters
+              // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers(30)
+              public void Evennumbers(int target)
+              {
+                  int start = 0;
+                  while (start < target)
+                  {
+                      Console.WriteLine(start);
+                      start += 2;
+                  }
+              }
+              // static method with parameters
+              // call it from main method  program.Addnumbers
+              public static int Addnumbers(int FN,int SN)
+              {
+                  return FN + SN;
+              }
+          */
+
 }
 
 
