@@ -207,16 +207,16 @@
 
         /**/  //Lesson9 
               //Comments
-        /*
-         sampleclass
-/// <summary>
-/// This is Sample class and documentation
-/// </summary>
-public class sampleclass
-{
+              /*
+               sampleclass
+      /// <summary>
+      /// This is Sample class and documentation
+      /// </summary>
+      public class sampleclass
+      {
 
-}
-*/
+      }
+      */
 
         /**/  //Lesson10 
               //IF Statment
@@ -251,41 +251,41 @@ public class sampleclass
               */
 
         /**/  //Lesson11 
-                    //SWITCH Statment
-        /*  Console.WriteLine("Please enter a number");
-                  string userInput = Console.ReadLine();
-                  int userNumber = int.Parse(userInput);
-                  switch (userNumber)
-                  {
-                    //    case 10:
-                    //    Console.WriteLine("The number that you entered is 10");
-                    //    break;
-                    //    case 20:
-                    //    Console.WriteLine("The number that you entered is 20");
-                    //    break;
-                    //    case 30:
-                    //    Console.WriteLine("The number that you entered is 30");
-                    //    break;
+              //SWITCH Statment
+              /*  Console.WriteLine("Please enter a number");
+                        string userInput = Console.ReadLine();
+                        int userNumber = int.Parse(userInput);
+                        switch (userNumber)
+                        {
+                          //    case 10:
+                          //    Console.WriteLine("The number that you entered is 10");
+                          //    break;
+                          //    case 20:
+                          //    Console.WriteLine("The number that you entered is 20");
+                          //    break;
+                          //    case 30:
+                          //    Console.WriteLine("The number that you entered is 30");
+                          //    break;
 
-                    //default:
-                    //    Console.WriteLine("The number that you entered is not valid");
-                    //    break;
+                          //default:
+                          //    Console.WriteLine("The number that you entered is not valid");
+                          //    break;
 
-                    //--------- you can join more than one case statment like that------------------ // 
+                          //--------- you can join more than one case statment like that------------------ // 
 
-                    case 10:
-                    case 20:
-                    case 30:
-                        Console.WriteLine("The number that you entered is {0}", userNumber);
-                        break;
+                          case 10:
+                          case 20:
+                          case 30:
+                              Console.WriteLine("The number that you entered is {0}", userNumber);
+                              break;
 
-                    default:
-                        Console.WriteLine("The number that you entered is not 10 or 20 or 30");
-                        break;
+                          default:
+                              Console.WriteLine("The number that you entered is not 10 or 20 or 30");
+                              break;
 
-                }
+                      }
 
-                */
+                      */
 
         /**/  //Lesson12
               //SWITCH Statment WITH GOTO
@@ -444,6 +444,73 @@ public class sampleclass
 
                                   while (userChoice == "yes") ;
                                  */
+
+
+
+
+
+
+        /**/  //Lesson15
+              //for each loop
+              /*
+                      int[] numbers = new int[3];
+                      int[] oddnumbers = {1,3,5,7};
+
+                      // FOR LOOP
+                      Console.WriteLine("--For loop--");
+                      for (int i = 0; i < oddnumbers.Length; i++)
+                      {
+                          Console.WriteLine(oddnumbers[i]);
+                      }
+
+
+                      // WHILE LOOP
+                      Console.WriteLine("--while loop--");
+                      int j = 0;
+                      while (j <oddnumbers.Length)
+                      {
+                          Console.WriteLine(oddnumbers[j]);
+                          j++;
+                      }
+
+                      // FOREACH LOOP
+                      Console.WriteLine("--FOREACH loop--");
+                      foreach (var item in oddnumbers)
+                      {
+                          Console.WriteLine(item);
+                      }
+                      */
+              /*
+             // BREAK & CONTINUE STATMENTS
+
+             // BREAK
+             Console.WriteLine("--BREAK--");
+             for (int i = 0; i < 20; i++)
+             {
+                 Console.WriteLine(i);
+                 if (i == 10)
+
+                     break;
+
+             }
+
+             // CONTINUE
+             Console.WriteLine("--CONTINUE--");
+             for (int j = 0; j < 20; j++)
+             {
+
+                 if (j % 2 == 1)
+                  continue;
+
+               Console.WriteLine(j);
+
+             }
+             */
+
+        /**/  //Lesson16
+              //METHODS
+
+
     }
 }
 
