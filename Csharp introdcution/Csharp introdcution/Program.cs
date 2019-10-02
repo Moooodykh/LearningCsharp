@@ -153,6 +153,7 @@
         /**/  //Lesson7 
               //Data type conversion
 
+
         /*
                       int f = 112;
                       //this called implicit converter which happens automatically (small to bigger types)
@@ -178,8 +179,10 @@
                       int result1 = int.Parse(number);
                       Console.WriteLine("Conversion result is for result1 is {0}\n", result1);
               */
+
         /**/  //Lesson8 
               //Arrays
+
 
         /*
                int[] oddNumbers = new int[3];
@@ -254,40 +257,41 @@
 
         /**/  //Lesson11 
               //SWITCH Statment
-              /*  Console.WriteLine("Please enter a number");
-                        string userInput = Console.ReadLine();
-                        int userNumber = int.Parse(userInput);
-                        switch (userNumber)
-                        {
-                          //    case 10:
-                          //    Console.WriteLine("The number that you entered is 10");
-                          //    break;
-                          //    case 20:
-                          //    Console.WriteLine("The number that you entered is 20");
-                          //    break;
-                          //    case 30:
-                          //    Console.WriteLine("The number that you entered is 30");
-                          //    break;
 
-                          //default:
-                          //    Console.WriteLine("The number that you entered is not valid");
-                          //    break;
+        /*  Console.WriteLine("Please enter a number");
+                  string userInput = Console.ReadLine();
+                  int userNumber = int.Parse(userInput);
+                  switch (userNumber)
+                  {
+                    //    case 10:
+                    //    Console.WriteLine("The number that you entered is 10");
+                    //    break;
+                    //    case 20:
+                    //    Console.WriteLine("The number that you entered is 20");
+                    //    break;
+                    //    case 30:
+                    //    Console.WriteLine("The number that you entered is 30");
+                    //    break;
 
-                          //--------- you can join more than one case statment like that------------------ // 
+                    //default:
+                    //    Console.WriteLine("The number that you entered is not valid");
+                    //    break;
 
-                          case 10:
-                          case 20:
-                          case 30:
-                              Console.WriteLine("The number that you entered is {0}", userNumber);
-                              break;
+                    //--------- you can join more than one case statment like that------------------ // 
 
-                          default:
-                              Console.WriteLine("The number that you entered is not 10 or 20 or 30");
-                              break;
+                    case 10:
+                    case 20:
+                    case 30:
+                        Console.WriteLine("The number that you entered is {0}", userNumber);
+                        break;
 
-                      }
+                    default:
+                        Console.WriteLine("The number that you entered is not 10 or 20 or 30");
+                        break;
 
-                      */
+                }
+
+                */
 
         /**/  //Lesson12
               //SWITCH Statment WITH GOTO
@@ -449,9 +453,6 @@
 
 
 
-
-
-
         /**/  //Lesson15
               //for each loop
               /*
@@ -510,62 +511,134 @@
              */
 
         /**/  //Lesson16
-              //METHODS
+              //METHODS (basic introduction)
               // calling methods from MAIN
-         /*
-              // calling instance methods
-        Program p = new Program();
-        // printing even numbers from 0 to number 20
-        Console.WriteLine("------Calling instance method without parameters----");
-        Console.WriteLine("------printing even numbers from 0 to number 20----");
-        p.Evennumbers();
-        // printing even numbers from 0 to number that the user put
-        Console.WriteLine("------Calling instance method with parameters----");
-        Console.WriteLine("------printing even numbers from 0 to number 30----");
-        p.Evennumbers(30);
-        Console.WriteLine("------Calling static method with parameters----");
-        Console.WriteLine("------Static method----");
-        // calling static method 
-        int sum = Program.Addnumbers(14, 22);
-        Console.WriteLine("Sum : {0}",sum);
-        */
+              /*
+                   // calling instance methods
+             Program p = new Program();
+             // printing even numbers from 0 to number 20
+             Console.WriteLine("------Calling instance method without parameters----");
+             Console.WriteLine("------printing even numbers from 0 to number 20----");
+             p.Evennumbers();
+             // printing even numbers from 0 to number that the user put
+             Console.WriteLine("------Calling instance method with parameters----");
+             Console.WriteLine("------printing even numbers from 0 to number 30----");
+             p.Evennumbers(30);
+             Console.WriteLine("------Calling static method with parameters----");
+             Console.WriteLine("------Static method----");
+             // calling static method 
+             int sum = Program.Addnumbers(14, 22);
+             Console.WriteLine("Sum : {0}",sum);
+             */
 
+        /**/  //Lesson17
+              //METHODS PARAMETERS
+              //1. ---------- passing by vaule ------------
+              /*        int i = 0;
+                      SimpleMethod(i);
+                      Console.WriteLine("Value of 'I' PASS BY VALUE  is : {0}", i);
+
+                      //2. ---------- passing by refernes ------------
+                      int s = 0;
+                      SimpleMethodRef(ref s);
+                      Console.WriteLine("Value of 'S' PASS BY VALUE is : {0}", s);
+                      //3. ---------- passing by OUT ------------
+                      // returning a SUM and Multiplication result from function 
+                      int total, PRO = 0;
+                      Calculate(50,10,out total,out PRO);
+                      Console.WriteLine("PASS BY OUT", s);
+                      Console.WriteLine("SUM: {0} and Product {1}", total,PRO);
+                      //4. ---------- passing by PARAMS ------------
+                      // passing an array and empty array
+                      int[] numbers = new int[3];
+                      numbers[0] = 101;
+                      numbers[1] = 102;
+                      numbers[2] = 103;
+                      Console.WriteLine("PASS BY PARAMS");
+                      Console.WriteLine("---------empty array---------");
+                      // you can call this because of there is PARAMS key word, this show no elements in the array.
+                      ParamMethod();
+                      Console.WriteLine("---------Numbers array---------");
+                      ParamMethod(numbers);
+                      // other possiblity to call it directly
+                      ParamMethod(1, 2, 3, 4, 5, 6);
+              */
     }
 
     /**/  //Lesson16
           //METHODS
           // making methods
-/*
-              // instance method with no parameters
-              // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers()
-              public void Evennumbers()
-              {
-                  int start = 0;
-                  while (start < 20)
-                  {
-                      Console.WriteLine(start);
-                      start += 2;
-                  }
+          /*
+                        // instance method with no parameters
+                        // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers()
+                        public void Evennumbers()
+                        {
+                            int start = 0;
+                            while (start < 20)
+                            {
+                                Console.WriteLine(start);
+                                start += 2;
+                            }
 
-              }
-              // instance method with parameters
-              // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers(30)
-              public void Evennumbers(int target)
-              {
-                  int start = 0;
-                  while (start < target)
-                  {
-                      Console.WriteLine(start);
-                      start += 2;
-                  }
-              }
-              // static method with parameters
-              // call it from main method  program.Addnumbers
-              public static int Addnumbers(int FN,int SN)
-              {
-                  return FN + SN;
-              }
-          */
+                        }
+                        // instance method with parameters
+                        // call it from main method with making an instance of the class object :- program p = new program() -> p.Evennumbers(30)
+                        public void Evennumbers(int target)
+                        {
+                            int start = 0;
+                            while (start < target)
+                            {
+                                Console.WriteLine(start);
+                                start += 2;
+                            }
+                        }
+                        // static method with parameters
+                        // call it from main method  program.Addnumbers
+                        public static int Addnumbers(int FN,int SN)
+                        {
+                            return FN + SN;
+                        }
+                    */
+
+
+         //Lesson17
+         //METHODS PARAMETERS
+
+    /*
+        // 1. method which pass value parameter
+        public static void SimpleMethod( int j)
+        {
+            j = 101;
+        }
+
+        // 2. method which pass reference parameter
+        public static void SimpleMethodRef(ref int j)
+        {
+            j = 101;
+        }
+
+        // 3. method which pass OUT parameter (Sending back the sum and mutliplication result) 
+        // VOID NOT INT because it returns two output varibales
+        public static void Calculate(int FN, int SN, out int Sum, out int product)
+        {
+            Sum=  FN + SN;
+            product = FN * SN;
+        }
+
+        // 4. method which pass PARAMS parameter 
+        // PARAMS PARAMETER  makes your input to method as optional even if you do not put the variable it will not be a problem
+        // PARAMS should be the last parameter and just only one
+            public static void ParamMethod(params int[] Numbers)
+        {
+            Console.WriteLine("There are {0} elements in the array", Numbers.Length);
+            foreach (var item in Numbers)
+            {
+                Console.WriteLine(item);
+
+            }
+        }
+        */
+
 
 }
 
