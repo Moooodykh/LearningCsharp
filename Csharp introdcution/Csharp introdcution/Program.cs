@@ -563,8 +563,12 @@
                       // other possiblity to call it directly
                       ParamMethod(1, 2, 3, 4, 5, 6);
               */
+
+        /**/  //Lesson18
+              //NAME SPACES LOCATED AT LESSON18.CS
     }
 
+    // --------------- METHODS NOT IN MAIN ----------------
     /**/  //Lesson16
           //METHODS
           // making methods
@@ -601,8 +605,8 @@
                     */
 
 
-         //Lesson17
-         //METHODS PARAMETERS
+    //Lesson17
+    //METHODS PARAMETERS
 
     /*
         // 1. method which pass value parameter
