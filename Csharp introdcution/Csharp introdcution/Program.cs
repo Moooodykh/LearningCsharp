@@ -565,7 +565,8 @@
               */
 
         /**/  //Lesson18
-              //NAME SPACES LOCATED AT LESSON18.CS
+              //NAME SPACES LOCATED AT LESSON18 folder *EASY USE with one project*
+              //NAME SPACES LOCATED AT LESSON18_B folder *USE one project to call C# class library dll files* 
     }
 
     // --------------- METHODS NOT IN MAIN ----------------
