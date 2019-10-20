@@ -167,14 +167,14 @@
                       int gh = Convert.ToInt32(num);
                       Console.WriteLine("gh is {0}", gh);
 
-
-
-                      string number = "100G";
+        
+                      string number = "100";
                       int result2;
 
                       // TRYPARSE method  returns a bool indicator if convertion succeeded or not
                       bool conversionResult = int.TryParse(number, out result2);
                       Console.WriteLine("Conversion result is for result2 is {0} and the result is {1}\n", conversionResult, result2);
+                      Console.WriteLine(result2.GetType());
                       // PARSE method convert with throwing an exception when the data is incorrect
                       int result1 = int.Parse(number);
                       Console.WriteLine("Conversion result is for result1 is {0}\n", result1);
@@ -185,43 +185,44 @@
 
 
         /*
-               int[] oddNumbers = new int[3];
-               oddNumbers[0] = 1;
-               oddNumbers[1] = 3;
-               oddNumbers[2] = 5;
+                int[] oddNumbers = new int[3];
+                oddNumbers[0] = 1;
+                oddNumbers[1] = 3;
+                oddNumbers[2] = 5;
 
-               Console.WriteLine("Printing ODD Numbers");
-               Console.Write("[");
-               for (int i=0;i<oddNumbers.Length;i++)
-               {
-                   if (i != oddNumbers.Length-1)
-                   Console.Write("{0} ",oddNumbers[i]);
-                   else
-                   {
-                       Console.Write("{0}", oddNumbers[i]);
-                   }
-               }
-               Console.WriteLine("]");
+                Console.WriteLine("Printing ODD Numbers");
+                Console.Write("[");
+                for (int i=0;i<oddNumbers.Length;i++)
+                {
+                    if (i != oddNumbers.Length-1)
+                    Console.Write("{0} ",oddNumbers[i]);
+                    else
+                    {
+                        Console.Write("{0}", oddNumbers[i]);
+                    }
+                }
+                Console.WriteLine("]");
 
-               int[] EvenNumber = { 2, 4, 6 };
-               for (int i = 0; i <EvenNumber.Length; i++)
-               {
-                   Console.WriteLine(EvenNumber[i]);
-               }
-               */
+                int[] EvenNumber = { 2, 4, 6 };
+                for (int i = 0; i <EvenNumber.Length; i++)
+                {
+                    Console.WriteLine(EvenNumber[i]);
+                }
+                */
 
         /**/  //Lesson9 
               //Comments
-              /*
-               sampleclass
-      /// <summary>
-      /// This is Sample class and documentation
-      /// </summary>
-      public class sampleclass
-      {
 
-      }
-      */
+        /*
+         sampleclass
+/// <summary>
+/// This is Sample class and documentation
+/// </summary>
+public class sampleclass
+{
+
+}
+*/
 
         /**/  //Lesson10 
               //IF Statment
@@ -366,55 +367,55 @@
 
         // this code is fixed :)
         /*
-                int coffeCost = 0;
-                Console.WriteLine("Welcome to our shop, choose your size of coffe");
-                int userChoise;
-                string userDecision = "";
-                do
-                {
-                    do
-                    {
-                        Console.WriteLine("1- Small, 2- Medium, 3- Large");
-                        userChoise = int.Parse(Console.ReadLine());
+                 int coffeCost = 0;
+                 Console.WriteLine("Welcome to our shop, choose your size of coffe");
+                 int userChoise;
+                 string userDecision = "";
+                 do
+                 {
+                     do
+                     {
+                         Console.WriteLine("1- Small, 2- Medium, 3- Large");
+                         userChoise = int.Parse(Console.ReadLine());
 
-                        switch (userChoise)
-                        {
-                            case 1:
-                                coffeCost += 1;
-                                break;
+                         switch (userChoise)
+                         {
+                             case 1:
+                                 coffeCost += 1;
+                                 break;
 
-                            case 2:
-                                coffeCost += 2;
-                                break;
+                             case 2:
+                                 coffeCost += 2;
+                                 break;
 
-                            case 3:
-                                coffeCost += 3;
-                                break;
+                             case 3:
+                                 coffeCost += 3;
+                                 break;
 
-                            default:
-                                Console.WriteLine("Your choice is invalid");
-                                break;
-                        }
-                    } while (userChoise != 1 && userChoise != 2 && userChoise != 3);
+                             default:
+                                 Console.WriteLine("Your choice is invalid");
+                                 break;
+                         }
+                     } while (userChoise != 1 && userChoise != 2 && userChoise != 3);
 
-                    Console.WriteLine("Do you want to buy another coffe? answer by 'YES' or 'NO' please ");
-                    userDecision = Console.ReadLine();
-                    do
-                    {
-                        if (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no")
-                        {
-                            Console.WriteLine("Your answer is INVALID. answer by 'YES' or 'NO' please ");
-                        }
-                    } while (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no");
-
-
-                } while (userDecision.ToLower() == "yes");
+                     Console.WriteLine("Do you want to buy another coffe? answer by 'YES' or 'NO' please ");
+                     userDecision = Console.ReadLine();
+                     do
+                     {
+                         if (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no")
+                         {
+                             Console.WriteLine("Your answer is INVALID. answer by 'YES' or 'NO' please ");
+                         }
+                     } while (userDecision.ToLower() != "yes" && userDecision.ToLower() != "no");
 
 
-                Console.WriteLine("Thank you for shopping with us");
-                Console.WriteLine(" Your bill amount is : {0} Euro ", coffeCost);
+                 } while (userDecision.ToLower() == "yes");
 
-             */
+
+                 Console.WriteLine("Thank you for shopping with us");
+                 Console.WriteLine(" Your bill amount is : {0} Euro ", coffeCost);
+
+              */
 
 
         /**/  //Lesson14
@@ -456,59 +457,59 @@
         /**/  //Lesson15
               //for each loop
               /*
-                      int[] numbers = new int[3];
-                      int[] oddnumbers = {1,3,5,7};
+                       int[] numbers = new int[3];
+                       int[] oddnumbers = {1,3,5,7};
 
-                      // FOR LOOP
-                      Console.WriteLine("--For loop--");
-                      for (int i = 0; i < oddnumbers.Length; i++)
+                       // FOR LOOP
+                       Console.WriteLine("--For loop--");
+                       for (int i = 0; i < oddnumbers.Length; i++)
+                       {
+                           Console.WriteLine(oddnumbers[i]);
+                       }
+
+
+                       // WHILE LOOP
+                       Console.WriteLine("--while loop--");
+                       int j = 0;
+                       while (j <oddnumbers.Length)
+                       {
+                           Console.WriteLine(oddnumbers[j]);
+                           j++;
+                       }
+
+                       // FOREACH LOOP
+                       Console.WriteLine("--FOREACH loop--");
+                       foreach (var item in oddnumbers)
+                       {
+                           Console.WriteLine(item);
+                       }
+                       */
+
+        // BREAK & CONTINUE STATMENTS
+        /*
+                      // BREAK
+                      Console.WriteLine("--BREAK--");
+                      for (int i = 0; i < 20; i++)
                       {
-                          Console.WriteLine(oddnumbers[i]);
+                          Console.WriteLine(i);
+                          if (i == 10)
+
+                              break;
+
                       }
 
-
-                      // WHILE LOOP
-                      Console.WriteLine("--while loop--");
-                      int j = 0;
-                      while (j <oddnumbers.Length)
+                      // CONTINUE
+                      Console.WriteLine("--CONTINUE--");
+                      for (int j = 0; j <= 20; j++)
                       {
-                          Console.WriteLine(oddnumbers[j]);
-                          j++;
-                      }
 
-                      // FOREACH LOOP
-                      Console.WriteLine("--FOREACH loop--");
-                      foreach (var item in oddnumbers)
-                      {
-                          Console.WriteLine(item);
+                          if (j % 2 == 1)
+                           continue;
+
+                        Console.WriteLine(j);
+
                       }
                       */
-              /*
-             // BREAK & CONTINUE STATMENTS
-
-             // BREAK
-             Console.WriteLine("--BREAK--");
-             for (int i = 0; i < 20; i++)
-             {
-                 Console.WriteLine(i);
-                 if (i == 10)
-
-                     break;
-
-             }
-
-             // CONTINUE
-             Console.WriteLine("--CONTINUE--");
-             for (int j = 0; j < 20; j++)
-             {
-
-                 if (j % 2 == 1)
-                  continue;
-
-               Console.WriteLine(j);
-
-             }
-             */
 
         /**/  //Lesson16
               //METHODS (basic introduction)
@@ -533,40 +534,68 @@
 
         /**/  //Lesson17
               //METHODS PARAMETERS
-              //1. ---------- passing by vaule ------------
-              /*        int i = 0;
-                      SimpleMethod(i);
-                      Console.WriteLine("Value of 'I' PASS BY VALUE  is : {0}", i);
 
-                      //2. ---------- passing by refernes ------------
-                      int s = 0;
-                      SimpleMethodRef(ref s);
-                      Console.WriteLine("Value of 'S' PASS BY VALUE is : {0}", s);
-                      //3. ---------- passing by OUT ------------
-                      // returning a SUM and Multiplication result from function 
-                      int total, PRO = 0;
-                      Calculate(50,10,out total,out PRO);
-                      Console.WriteLine("PASS BY OUT", s);
-                      Console.WriteLine("SUM: {0} and Product {1}", total,PRO);
-                      //4. ---------- passing by PARAMS ------------
-                      // passing an array and empty array
-                      int[] numbers = new int[3];
-                      numbers[0] = 101;
-                      numbers[1] = 102;
-                      numbers[2] = 103;
-                      Console.WriteLine("PASS BY PARAMS");
-                      Console.WriteLine("---------empty array---------");
-                      // you can call this because of there is PARAMS key word, this show no elements in the array.
-                      ParamMethod();
-                      Console.WriteLine("---------Numbers array---------");
-                      ParamMethod(numbers);
-                      // other possiblity to call it directly
-                      ParamMethod(1, 2, 3, 4, 5, 6);
-              */
+        //1. ---------- passing by vaule ------------
+        /*      
+               int i = 0;
+               SimpleMethod(i);
+               Console.WriteLine("Value of 'I' PASS BY VALUE  is : {0}", i);
+               Console.WriteLine("--------------------------------------");
+               //2. ---------- passing by refernes ------------
+               int s = 0;
+               SimpleMethodRef(ref s);
+               Console.WriteLine("Value of 'S' PASS BY VALUE is : {0}", s);
+               Console.WriteLine("--------------------------------------");
+               //3. ---------- passing by OUT ------------
+               // returning a SUM and Multiplication result from function 
+               int total, PRO = 0;
+               Calculate(50,10,out total,out PRO);
+               Console.WriteLine("PASS BY OUT");
+               Console.WriteLine("SUM: {0} and Product {1}", total,PRO);
+               Console.WriteLine("--------------------------------------");
+               //4. ---------- passing by PARAMS ------------
+               // passing an array and empty array
+               int[] numbers = new int[3];
+               numbers[0] = 101;
+               numbers[1] = 102;
+               numbers[2] = 103;
+               Console.WriteLine("PASS BY PARAMS");
+               Console.WriteLine("---------empty array---------");
+               // you can call this because of there is PARAMS key word, this show no elements in the array.
+               ParamMethod();
+               Console.WriteLine("---------Numbers array---------");
+               ParamMethod(numbers);
+               // other possiblity to call it directly
+               ParamMethod(1, 2, 3, 4, 5, 6);
+       */
 
         /**/  //Lesson18
               //NAME SPACES LOCATED AT LESSON18 folder *EASY USE with one project*
               //NAME SPACES LOCATED AT LESSON18_B folder *USE one project to call C# class library dll files* 
+              // LOCATION DOWN:
+              //  C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\lesson18
+              //  C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\lesson18_B
+
+
+        /**/  //Lesson19
+              //Introduction to classes
+              /*
+                      // class with default values based on the first constructor
+                      Customer C1 = new Customer();
+                      // class called based on second constructor
+                      Customer C2 = new Customer("Ahmad","Johansson");
+                      // class called based on third constructor
+                      Customer C3 = new Customer("Ahmad", "Johansson",27);
+                      // class called based on Fourth constructor
+                      Customer C4 = new Customer("Ali", 27);
+
+                      C1.PrintFullName();
+                      C2.PrintFullName();
+                      C3.PrintFullName();
+                      C4.PrintFullName();
+              */
+
+
     }
 
     // --------------- METHODS NOT IN MAIN ----------------
@@ -611,7 +640,7 @@
 
     /*
         // 1. method which pass value parameter
-        public static void SimpleMethod( int j)
+        public static void SimpleMethod(int j)
         {
             j = 101;
         }
@@ -647,5 +676,60 @@
 
 }
 
+
+/**/  //Lesson19
+      //Introduction to classes
+ /*
+  * class Customer
+{
+    //-------------- class attributes --------------
+    string _firstName;
+    string _lastName;
+    int age;
+
+    //-------------- class constructor --------------
+    // this is used to intial the class attributes
+    public Customer() 
+        : this("Oh","No",30)
+       // this line is added to make the default instructor containing these values
+    {
+
+    }
+    public Customer(string FirstName, string LastName)
+    {
+        this._firstName = FirstName;
+        this._lastName = LastName;
+    }
+
+    public Customer(string firstName, string lastName, int Age)
+    {
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this.age = Age;
+    }
+
+    public Customer(string _lastName, int age)
+    {
+        this._lastName = _lastName;
+        this.age = age;
+    }
+
+
+    //-------------- class behaviour --------------
+    // this means all class methods that is used in the class like Write Full name method
+    public void PrintFullName()
+    {
+        Console.WriteLine("Full name is :" + this._firstName + " " + this._lastName);
+        Console.WriteLine("Age is :" + this.age);
+    }
+
+    // ------------- deconstructor-----------------
+    // this is the style of deconstructor which is used to free the momory of the used object 
+    ~Customer()
+    {
+        // CODE TO CLEAN
+    }
+}
+*/
 
 
