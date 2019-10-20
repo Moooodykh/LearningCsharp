@@ -619,6 +619,32 @@ public class sampleclass
 
         /**/  //Lesson21
               // Inheritance in c#
+
+        //-------------------------- PART 1 ------------------------
+        /*
+        PartTimeEmployee pte = new PartTimeEmployee();
+        pte._firstName = "Ahmad";
+        pte._lastName = "Johansson";
+        pte.Hourlyrate = 680;
+        pte.PrintFullName();
+
+
+        FullTimeEmployee fte = new FullTimeEmployee();
+        fte._firstName = "Dalida";
+        fte._lastName = "Matsson";
+        fte.AnuualSalary = 650000;
+        fte.PrintFullName();
+
+        // child to Parttime class which is inhertied from Employee class and in that way , A class has both class proberties
+        A a1 = new A();
+        */
+        //-------------------------- PART 2 ------------------------
+        /*  ChildClass cc = new ChildClass();
+       */
+
+        /**/  //Lesson22
+              // Inheritance in c#
+
     }
 
     // ------------------------------------------ METHODS NOT IN MAIN -------------------------------------------
@@ -702,58 +728,58 @@ public class sampleclass
 // ------------------------------------- CLASSES NOT IN MAIN ---------------------------------------------------
 /**/  //Lesson19
       //Introduction to classes
-/*
-       * class Customer
-     {
-         //-------------- class attributes --------------
-         string _firstName;
-         string _lastName;
-         int age;
+      /*
+             * class Customer
+           {
+               //-------------- class attributes --------------
+               string _firstName;
+               string _lastName;
+               int age;
 
-         //-------------- class constructor --------------
-         // this is used to intial the class attributes
-         public Customer() 
-             : this("Oh","No",30)
-            // this line is added to make the default instructor containing these values
-         {
+               //-------------- class constructor --------------
+               // this is used to intial the class attributes
+               public Customer() 
+                   : this("Oh","No",30)
+                  // this line is added to make the default instructor containing these values
+               {
 
-         }
-         public Customer(string FirstName, string LastName)
-         {
-             this._firstName = FirstName;
-             this._lastName = LastName;
-         }
+               }
+               public Customer(string FirstName, string LastName)
+               {
+                   this._firstName = FirstName;
+                   this._lastName = LastName;
+               }
 
-         public Customer(string firstName, string lastName, int Age)
-         {
-             this._firstName = firstName;
-             this._lastName = lastName;
-             this.age = Age;
-         }
+               public Customer(string firstName, string lastName, int Age)
+               {
+                   this._firstName = firstName;
+                   this._lastName = lastName;
+                   this.age = Age;
+               }
 
-         public Customer(string _lastName, int age)
-         {
-             this._lastName = _lastName;
-             this.age = age;
-         }
+               public Customer(string _lastName, int age)
+               {
+                   this._lastName = _lastName;
+                   this.age = age;
+               }
 
 
-         //-------------- class behaviour --------------
-         // this means all class methods that is used in the class like Write Full name method
-         public void PrintFullName()
-         {
-             Console.WriteLine("Full name is :" + this._firstName + " " + this._lastName);
-             Console.WriteLine("Age is :" + this.age);
-         }
+               //-------------- class behaviour --------------
+               // this means all class methods that is used in the class like Write Full name method
+               public void PrintFullName()
+               {
+                   Console.WriteLine("Full name is :" + this._firstName + " " + this._lastName);
+                   Console.WriteLine("Age is :" + this.age);
+               }
 
-         // ------------- deconstructor-----------------
-         // this is the style of deconstructor which is used to free the momory of the used object 
-         ~Customer()
-         {
-             // CODE TO CLEAN
-         }
-     }
-     */
+               // ------------- deconstructor-----------------
+               // this is the style of deconstructor which is used to free the momory of the used object 
+               ~Customer()
+               {
+                   // CODE TO CLEAN
+               }
+           }
+           */
 
 /**/  //Lesson20
       //Static and instance class members(events,methods,proberties) 
@@ -790,3 +816,68 @@ public class sampleclass
       }
 
           */
+
+/**/  //Lesson21
+      // Inheritance in c#
+
+//-------------------------- PART 1 ------------------------
+// BASE CLASS -- PARENT CLASS
+/*
+public class Employee
+{
+public string _firstName;
+public string _lastName;
+public string _Email;
+
+// constructor
+
+// methods : behavior
+public void PrintFullName()
+{
+    Console.WriteLine("Full name:" + this._firstName + " " + this._lastName);
+}
+
+}
+// child class is derived from Parent class
+public class PartTimeEmployee : Employee  
+{
+public float Hourlyrate;
+}
+
+// child class is derived from Parent class
+public class FullTimeEmployee : Employee
+{
+public float AnuualSalary;
+}
+
+public class A : FullTimeEmployee
+{
+// child to Parttime class which is inhertied from Employee class and in that way , A class has both class proberties
+}
+*/
+//-------------------------- PART 2 ------------------------
+/*
+class ParentClass
+{
+    public ParentClass()
+    {
+        Console.WriteLine("Parent class called");
+    }
+    public ParentClass(string Message)
+    {
+        Console.WriteLine("Parent class called with string Message" + Message);
+    }
+}
+
+class ChildClass : ParentClass
+{
+    public ChildClass() 
+        : base("Hello guys")
+    // this line of code calling the PARENT class constructor which contains String MESSAGE not the default one
+    //* When there is no  : base("Hello guys") line so it will take the default constructor from the PARENT CLASS
+    {
+        Console.WriteLine("Child class called");
+    }
+}
+
+*/
