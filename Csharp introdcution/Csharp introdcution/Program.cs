@@ -595,10 +595,33 @@ public class sampleclass
                       C4.PrintFullName();
               */
 
+        /**/  //Lesson20
+              //Static and instance class members(events,methods,proberties) 
 
+
+        /*
+        Circle c1 = new Circle(5);
+        float Area1 = c1.CalculateArea();
+        Console.WriteLine("Radius = {0}", c1._radius);
+        Console.WriteLine("Area = {0}",Area1);
+        Circle c2 = new Circle(6);
+        float Area2 = c2.CalculateArea();
+        Console.WriteLine("Radius = {0}", c2._radius);
+        Console.WriteLine("Area = {0}", Area2);
+        
+         
+        // * this line will call/show that static constructor is first called before instance constructor and without any calling to constructor
+        // * this line we use without using the seven lines mentioned above
+        
+        Console.WriteLine(Circle._PI);
+       
+          */
+
+        /**/  //Lesson21
+              // Inheritance in c#
     }
 
-    // --------------- METHODS NOT IN MAIN ----------------
+    // ------------------------------------------ METHODS NOT IN MAIN -------------------------------------------
     /**/  //Lesson16
           //METHODS
           // making methods
@@ -676,60 +699,94 @@ public class sampleclass
 
 }
 
-
+// ------------------------------------- CLASSES NOT IN MAIN ---------------------------------------------------
 /**/  //Lesson19
       //Introduction to classes
- /*
-  * class Customer
-{
-    //-------------- class attributes --------------
-    string _firstName;
-    string _lastName;
-    int age;
+/*
+       * class Customer
+     {
+         //-------------- class attributes --------------
+         string _firstName;
+         string _lastName;
+         int age;
 
-    //-------------- class constructor --------------
-    // this is used to intial the class attributes
-    public Customer() 
-        : this("Oh","No",30)
-       // this line is added to make the default instructor containing these values
-    {
+         //-------------- class constructor --------------
+         // this is used to intial the class attributes
+         public Customer() 
+             : this("Oh","No",30)
+            // this line is added to make the default instructor containing these values
+         {
 
-    }
-    public Customer(string FirstName, string LastName)
-    {
-        this._firstName = FirstName;
-        this._lastName = LastName;
-    }
+         }
+         public Customer(string FirstName, string LastName)
+         {
+             this._firstName = FirstName;
+             this._lastName = LastName;
+         }
 
-    public Customer(string firstName, string lastName, int Age)
-    {
-        this._firstName = firstName;
-        this._lastName = lastName;
-        this.age = Age;
-    }
+         public Customer(string firstName, string lastName, int Age)
+         {
+             this._firstName = firstName;
+             this._lastName = lastName;
+             this.age = Age;
+         }
 
-    public Customer(string _lastName, int age)
-    {
-        this._lastName = _lastName;
-        this.age = age;
-    }
-
-
-    //-------------- class behaviour --------------
-    // this means all class methods that is used in the class like Write Full name method
-    public void PrintFullName()
-    {
-        Console.WriteLine("Full name is :" + this._firstName + " " + this._lastName);
-        Console.WriteLine("Age is :" + this.age);
-    }
-
-    // ------------- deconstructor-----------------
-    // this is the style of deconstructor which is used to free the momory of the used object 
-    ~Customer()
-    {
-        // CODE TO CLEAN
-    }
-}
-*/
+         public Customer(string _lastName, int age)
+         {
+             this._lastName = _lastName;
+             this.age = age;
+         }
 
 
+         //-------------- class behaviour --------------
+         // this means all class methods that is used in the class like Write Full name method
+         public void PrintFullName()
+         {
+             Console.WriteLine("Full name is :" + this._firstName + " " + this._lastName);
+             Console.WriteLine("Age is :" + this.age);
+         }
+
+         // ------------- deconstructor-----------------
+         // this is the style of deconstructor which is used to free the momory of the used object 
+         ~Customer()
+         {
+             // CODE TO CLEAN
+         }
+     }
+     */
+
+/**/  //Lesson20
+      //Static and instance class members(events,methods,proberties) 
+      /*
+      class Circle
+      {
+          // proberties
+          // STATIC word added because it is fixed number which is used every time we make an instance of this object.
+          // This will be called once to reduce the amount of memory in each object
+          public static float _PI;
+          public int _radius; // { get; set; }
+
+          // STatic constructor is built to call once when intial values for first time and this reduce the amount of memory called in
+          // every time we call the CIRCLE CLASS
+          static Circle()
+          {
+              Console.WriteLine("Static constructor called");
+              _PI = 3.14F;
+          }
+
+          // consturctor
+          public Circle(int Radius)
+          {
+              Console.WriteLine("Instance constructor called");
+              this._radius = Radius;
+          }
+
+          // behaviour (methods)
+          public float CalculateArea()
+          {
+              return Circle._PI * this._radius * this._radius;
+          }
+
+      }
+
+          */
