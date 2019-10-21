@@ -621,7 +621,7 @@ public class sampleclass
               // Inheritance in c#
 
         //-------------------------- PART 1 ------------------------
-        /*
+  /*
         PartTimeEmployee pte = new PartTimeEmployee();
         pte._firstName = "Ahmad";
         pte._lastName = "Johansson";
@@ -639,7 +639,7 @@ public class sampleclass
         A a1 = new A();
         */
         //-------------------------- PART 2 ------------------------
-        /*  ChildClass cc = new ChildClass();
+  /*  ChildClass cc = new ChildClass();
        */
 
         /**/  //Lesson22
@@ -665,9 +665,18 @@ public class sampleclass
         /**/  //Lesson23
               // Polymorphism in c#
 
+ /*
+        Employee[] employees = new Employee[4];
+        employees[0] = new Employee();
+        employees[1] = new PartTimeEmployee();
+        employees[2] = new FullTimeEmployee();
+        employees[3] = new TemporaryEmployee();
 
-
-
+        foreach (var item in employees)
+        {
+            item.PrintFullName();
+        }
+        */
 
     }
 
@@ -808,45 +817,46 @@ public class sampleclass
 /**/  //Lesson20
       //Static and instance class members(events,methods,proberties) 
       /*
-      class Circle
-      {
-          // proberties
-          // STATIC word added because it is fixed number which is used every time we make an instance of this object.
-          // This will be called once to reduce the amount of memory in each object
-          public static float _PI;
-          public int _radius; // { get; set; }
+     class Circle
+     {
+         // proberties
+         // STATIC word added because it is fixed number which is used every time we make an instance of this object.
+         // This will be called once to reduce the amount of memory in each object
+         public static float _PI;
+         public int _radius; // { get; set; }
 
-          // STatic constructor is built to call once when intial values for first time and this reduce the amount of memory called in
-          // every time we call the CIRCLE CLASS
-          static Circle()
-          {
-              Console.WriteLine("Static constructor called");
-              _PI = 3.14F;
-          }
+         // STatic constructor is built to call once when intial values for first time and this reduce the amount of memory called in
+         // every time we call the CIRCLE CLASS
+         static Circle()
+         {
+             Console.WriteLine("Static constructor called");
+             _PI = 3.14F;
+         }
 
-          // consturctor
-          public Circle(int Radius)
-          {
-              Console.WriteLine("Instance constructor called");
-              this._radius = Radius;
-          }
+         // consturctor
+         public Circle(int Radius)
+         {
+             Console.WriteLine("Instance constructor called");
+             this._radius = Radius;
+         }
 
-          // behaviour (methods)
-          public float CalculateArea()
-          {
-              return Circle._PI * this._radius * this._radius;
-          }
+         // behaviour (methods)
+         public float CalculateArea()
+         {
+             return Circle._PI * this._radius * this._radius;
+         }
 
-      }
+     }
 
-          */
+         */
 
 /**/  //Lesson21
       // Inheritance in c#
 
 //-------------------------- PART 1 ------------------------
+      /*
 // BASE CLASS -- PARENT CLASS
-/*
+
 public class Employee
 {
 public string _firstName;
@@ -858,7 +868,7 @@ public string _Email;
 // methods : behavior
 public void PrintFullName()
 {
-    Console.WriteLine("Full name:" + this._firstName + " " + this._lastName);
+Console.WriteLine("Full name:" + this._firstName + " " + this._lastName);
 }
 
 }
@@ -880,7 +890,7 @@ public class A : FullTimeEmployee
 }
 */
 //-------------------------- PART 2 ------------------------
-/*
+      /*
 class ParentClass
 {
     public ParentClass()
@@ -940,3 +950,43 @@ class ChildClass : ParentClass
 
 /**/  //Lesson23
       // Polymorphism in c#
+      /*
+          // Parent class
+
+      class Employee
+      {
+          public string _firstname = "FN";
+          public string _lastname = "LN";
+
+          //virtual  is used to mention that method can be overriden by child class which contains the same name of method
+          public virtual void PrintFullName()
+          {
+              Console.WriteLine(this._firstname + " " + this._lastname);
+          }
+      }
+
+      // CHILD CLASSES
+      class TemporaryEmployee : Employee
+      {
+          public override void PrintFullName()
+          {
+              Console.WriteLine(this._firstname + " " + this._lastname + "-- Temperary Employee");
+          }
+      }
+      class PartTimeEmployee : Employee
+      {
+          public override void PrintFullName()
+          {
+              Console.WriteLine(this._firstname + " " + this._lastname + "-- Part Time Employee");
+          }
+
+      }
+      class FullTimeEmployee : Employee
+      {
+          public override void PrintFullName()
+          {
+              Console.WriteLine(this._firstname + " " + this._lastname + "-- Full Time Employee");
+          }
+      }
+
+      */
