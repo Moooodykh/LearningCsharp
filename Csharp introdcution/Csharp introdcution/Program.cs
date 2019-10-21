@@ -643,7 +643,31 @@ public class sampleclass
        */
 
         /**/  //Lesson22
-              // Inheritance in c#
+              // Method hiding in c#
+              /*
+        PartTimeEmployee pte = new PartTimeEmployee();
+        pte._lastName = "Adi";
+        pte._firstName = "Daniel";
+        // this method in the child class will hide the same method in the parent class
+        pte.PrintFullName();
+        // This statement will call PrintFullName method which is located in the Parent class by converting the pte object to 
+        //* Employee object and the print Employee method 
+        // ((Employee)pte).PrintFullName();
+
+        //* other way to call Parent method is to use the statement below
+        Employee PTE = new PartTimeEmployee();
+        PTE._lastName = "Abbarof";
+        PTE._firstName = "Johan";
+        PTE.PrintFullName();
+
+        */
+
+        /**/  //Lesson23
+              // Polymorphism in c#
+
+
+
+
 
     }
 
@@ -881,3 +905,38 @@ class ChildClass : ParentClass
 }
 
 */
+
+/**/  //Lesson22
+      // Method hiding in c#
+      /*
+          //PARENT CLASS
+          class Employee
+      {
+          public string _firstName;
+          public string _lastName;
+
+          public void PrintFullName()
+          {
+              Console.WriteLine(this._firstName + " " + this._lastName);
+          }
+      }
+
+      // Child class
+      class PartTimeEmployee : Employee
+      {
+          public float Hourlyrate;
+          public new void PrintFullName()
+          {
+              // This statement to call the PrintFullName which is PARENT method which is overriden by child method with the same name
+              //  base.PrintFullName();
+
+              Console.WriteLine(this._firstName + " " + this._lastName + "      --- contractor");
+          }
+
+      }
+      */
+
+
+
+/**/  //Lesson23
+      // Polymorphism in c#
