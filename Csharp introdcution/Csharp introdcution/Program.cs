@@ -4,7 +4,7 @@
     class Program
     {
         static void Main()
-        {
+    {
 
 
         /**/    //Lesson1 
@@ -621,26 +621,26 @@ public class sampleclass
               // Inheritance in c#
 
         //-------------------------- PART 1 ------------------------
-  /*
-        PartTimeEmployee pte = new PartTimeEmployee();
-        pte._firstName = "Ahmad";
-        pte._lastName = "Johansson";
-        pte.Hourlyrate = 680;
-        pte.PrintFullName();
+        /*
+              PartTimeEmployee pte = new PartTimeEmployee();
+              pte._firstName = "Ahmad";
+              pte._lastName = "Johansson";
+              pte.Hourlyrate = 680;
+              pte.PrintFullName();
 
 
-        FullTimeEmployee fte = new FullTimeEmployee();
-        fte._firstName = "Dalida";
-        fte._lastName = "Matsson";
-        fte.AnuualSalary = 650000;
-        fte.PrintFullName();
+              FullTimeEmployee fte = new FullTimeEmployee();
+              fte._firstName = "Dalida";
+              fte._lastName = "Matsson";
+              fte.AnuualSalary = 650000;
+              fte.PrintFullName();
 
-        // child to Parttime class which is inhertied from Employee class and in that way , A class has both class proberties
-        A a1 = new A();
-        */
+              // child to Parttime class which is inhertied from Employee class and in that way , A class has both class proberties
+              A a1 = new A();
+              */
         //-------------------------- PART 2 ------------------------
-  /*  ChildClass cc = new ChildClass();
-       */
+        /*  ChildClass cc = new ChildClass();
+             */
 
         /**/  //Lesson22
               // Method hiding in c#
@@ -665,18 +665,33 @@ public class sampleclass
         /**/  //Lesson23
               // Polymorphism in c#
 
- /*
-        Employee[] employees = new Employee[4];
-        employees[0] = new Employee();
-        employees[1] = new PartTimeEmployee();
-        employees[2] = new FullTimeEmployee();
-        employees[3] = new TemporaryEmployee();
+        /*
+               Employee[] employees = new Employee[4];
+               employees[0] = new Employee();
+               employees[1] = new PartTimeEmployee();
+               employees[2] = new FullTimeEmployee();
+               employees[3] = new TemporaryEmployee();
 
-        foreach (var item in employees)
-        {
-            item.PrintFullName();
-        }
-        */
+               foreach (var item in employees)
+               {
+                   item.PrintFullName();
+               }
+               */
+        /**/  //Lesson24
+              // Difference between method overriding and method hiding in c#
+/*
+                      BaseClass B = new BaseClass();
+                      B.Print();
+                      // calling with OVERRIDE KEYWORD type in the derived class will call PRINT method in derived class
+                      // calling with NEW KEYWORD in the derived class will call PRINT method in base class and hide PRINT METHOD in the child
+                      BaseClass b = new DerivedClass();
+                      b.Print();
+
+                      DerivedClass D = new DerivedClass();
+                      D.Print();
+
+              */
+
 
     }
 
@@ -854,7 +869,7 @@ public class sampleclass
       // Inheritance in c#
 
 //-------------------------- PART 1 ------------------------
-      /*
+/*
 // BASE CLASS -- PARENT CLASS
 
 public class Employee
@@ -890,28 +905,28 @@ public class A : FullTimeEmployee
 }
 */
 //-------------------------- PART 2 ------------------------
-      /*
+/*
 class ParentClass
 {
-    public ParentClass()
-    {
-        Console.WriteLine("Parent class called");
-    }
-    public ParentClass(string Message)
-    {
-        Console.WriteLine("Parent class called with string Message" + Message);
-    }
+public ParentClass()
+{
+  Console.WriteLine("Parent class called");
+}
+public ParentClass(string Message)
+{
+  Console.WriteLine("Parent class called with string Message" + Message);
+}
 }
 
 class ChildClass : ParentClass
 {
-    public ChildClass() 
-        : base("Hello guys")
-    // this line of code calling the PARENT class constructor which contains String MESSAGE not the default one
-    //* When there is no  : base("Hello guys") line so it will take the default constructor from the PARENT CLASS
-    {
-        Console.WriteLine("Child class called");
-    }
+public ChildClass() 
+  : base("Hello guys")
+// this line of code calling the PARENT class constructor which contains String MESSAGE not the default one
+//* When there is no  : base("Hello guys") line so it will take the default constructor from the PARENT CLASS
+{
+  Console.WriteLine("Child class called");
+}
 }
 
 */
@@ -989,4 +1004,23 @@ class ChildClass : ParentClass
           }
       }
 
+      */
+
+/**/  //Lesson24
+      // Difference between method overriding and method hiding in c#
+      /*
+      class BaseClass
+      {
+          public virtual void Print()
+          {
+              Console.WriteLine("Base class method called");
+          }
+      }
+      class DerivedClass : BaseClass
+      {
+          public override void Print() //OR new void Print()
+          {
+              Console.WriteLine("Derived class method called");
+          }
+      }
       */
