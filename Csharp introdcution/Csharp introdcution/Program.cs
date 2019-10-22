@@ -699,7 +699,20 @@ public class sampleclass
         // add();
 
         /**/  //Lesson26
-              // Why Properties in c#
+              // Properties in c#
+              /*
+                      Student S = new Student();
+                      S.SetID(200);
+
+                      Console.WriteLine("Student ID: {0}", S.GetID());
+                      Console.WriteLine("Student Name: {0}", S.GetName());
+                      Console.WriteLine("Student Pass mark: {0}", S.GetPassMark());
+
+                      S.Print();
+
+                      */
+
+
 
 
 
@@ -1070,6 +1083,7 @@ public ChildClass()
 
       */
 
+
 /**/  //Lesson24
       // Difference between method overriding and method hiding in c#
       /*
@@ -1085,6 +1099,56 @@ public ChildClass()
           public override void Print() //OR new void Print()
           {
               Console.WriteLine("Derived class method called");
+          }
+      }
+      */
+
+
+/**/  //Lesson26
+      // Why properties in c#
+      /*
+          class Student
+      {
+         int _studentID;
+         string _name;
+         int _markpass = 35;
+
+          // -------------- ID -----------------
+          public void SetID(int ID)
+          {
+              if (ID <= 0)
+              {
+                  throw new Exception("Student ID must be non negative value");
+              }
+              this._studentID = ID;
+          }
+      public int GetID()
+          {
+              return this._studentID;
+          }
+          // -------------- NAME -----------------
+          public void SetName(string NAME)
+          {
+              if(string.IsNullOrEmpty(NAME)== true)
+              {
+                  throw new Exception("Name can not be set to NULL");
+              }
+              this._name = NAME;
+          }
+          public string GetName()
+          {
+           return string.IsNullOrEmpty(this._name) ? "\"No Name\"" : this._name;
+
+          }
+          // -------------- Pass Mark -----------------
+          public int GetPassMark()
+          {
+              return this._markpass;
+          }
+
+          public void Print()
+          {
+              Console.WriteLine("Student ID: {0} , Name: {1}, PassMark: {2}",GetID(),GetName(),GetPassMark());
           }
       }
       */
