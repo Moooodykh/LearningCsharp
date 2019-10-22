@@ -679,18 +679,29 @@ public class sampleclass
                */
         /**/  //Lesson24
               // Difference between method overriding and method hiding in c#
-/*
-                      BaseClass B = new BaseClass();
-                      B.Print();
-                      // calling with OVERRIDE KEYWORD type in the derived class will call PRINT method in derived class
-                      // calling with NEW KEYWORD in the derived class will call PRINT method in base class and hide PRINT METHOD in the child
-                      BaseClass b = new DerivedClass();
-                      b.Print();
+              /*
+                                                  BaseClass B = new BaseClass();
+                                                  B.Print();
+                                                  // calling with OVERRIDE KEYWORD type in the derived class will call PRINT method in derived class
+                                                  // calling with NEW KEYWORD in the derived class will call PRINT method in base class and hide PRINT METHOD in the child
+                                                  BaseClass b = new DerivedClass();
+                                                  b.Print();
 
-                      DerivedClass D = new DerivedClass();
-                      D.Print();
+                                                  DerivedClass D = new DerivedClass();
+                                                  D.Print();
 
-              */
+                                          */
+
+        /**/  //Lesson25
+              // Method overloading in c#
+
+        // calling this method will show variants of this methods
+        // add();
+
+        /**/  //Lesson26
+              // Why Properties in c#
+
+
 
 
     }
@@ -769,6 +780,59 @@ public class sampleclass
             }
         }
         */
+
+    /**/  //Lesson25
+          // Method overloading in c#
+
+    /*
+       public static void  add(int FN, int SN, int TN)
+       {
+           Console.WriteLine("Sum = {0}", FN + SN + TN);
+       }
+
+       // overloading is possbile because this method contains not the same amount of arguments
+       public static void add(int FN, int SN)
+       {
+           Console.WriteLine("Sum = {0}", FN + SN );
+       }
+
+       // overloading is possbile because the Type of parameter is differ from the first method(float SN)
+       public static void add(int FN,float SN, int TN)
+       {
+           Console.WriteLine("Sum = {0}", FN + SN + TN);
+       }
+
+       // overloading is possbile because the Type of parameter is differ from the first method (out int TN)
+       public static void add(int FN, int SN, out int TN)
+       {
+           Console.WriteLine("Sum = {0}", FN + SN );
+           TN = FN + SN;
+       }
+
+       // overloading is not possbile if we have the same method but different type (from VOID to INT) or have a PARAMS modifier
+       //---------------------------------MAIN Example (from VOID to INT)------------------------------------
+       public static void Sub(int FN, int SN)
+       {
+           Console.WriteLine("Sum = {0}", FN - SN);
+       }
+       // this will be ERROR (the same method but different returning type)
+       public static int Sub(int FN, int SN)
+       {
+           Console.WriteLine("Sum = {0}", FN - SN);
+           return FN - SN;
+       }
+       //------------------------  PARAMS ----------------------------
+       public void Mul(int FN,params int[] SN)
+       {
+           Console.WriteLine("Sum = {0}");
+       }
+       public int Mul(int FN, int[] SN)
+       {
+           Console.WriteLine("Sum = {0}");
+           return FN ;
+       }
+
+       */
 
 
 }
