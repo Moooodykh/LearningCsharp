@@ -713,16 +713,39 @@ public class sampleclass
                       */
 
         /**/  //Lesson27
-              // Properties in c# with SET and GET
+              // Properties in c# with SET and GET methods
 /*
-        Student st = new Student();
-        st.ID = 101;
-        st.Name = "MARK";
+                                    Student st = new Student();
+                                    st.ID = 101;
+                                    st.Name = "MARK";
 
-        Console.WriteLine("Student ID : {0}",st.ID);
-        Console.WriteLine("Student Name : {0}", st.Name);
-        Console.WriteLine("Student Passmark : {0}", st.Passmark);
-        */
+                                    Console.WriteLine("Student ID : {0}",st.ID);
+                                    Console.WriteLine("Student Name : {0}", st.Name);
+                                    Console.WriteLine("Student Passmark : {0}", st.Passmark);
+                                    */
+
+        /**/  //Lesson28
+              // Structs in c# 
+              /*
+                      // one method for calling
+                      Customer c1 = new Customer(102,"Mark");
+                      c1.Print();
+                      // Second method for calling
+                      Customer c2 = new Customer();
+                      c2.Id = 111;
+                      c2.Name = "Walid";
+                      c2.Print();
+                      // Third method for calling (object intializer syntax)
+                      Customer c3 = new Customer()
+                      {
+                          Id = 222, Name = "John"
+                      } ;
+                      c3.Print();
+
+                      */
+
+
+
 
     }
 
@@ -1165,49 +1188,104 @@ public ChildClass()
       //properties in c# with SET and GET methods (SET and GET proberties)
 
       /*
-    class Student
+class Student
 {   string _name;
-    int _passmark = 35;
-    int _id;
+int _passmark = 35;
+int _id;
 
-    // ID with SET and GET method as proberty
-    public int ID{
-        get {
-            return this._id;
-        }
-        set
-        {
-            if ( value <= 0)
-            {
-                throw new Exception("Student ID must be non negativ");
-            }
-            this._id = value;
-        }
+// ID with SET and GET method as proberty
+public int ID{
+  get {
+      return this._id;
+  }
+  set
+  {
+      if ( value <= 0)
+      {
+          throw new Exception("Student ID must be non negativ");
+      }
+      this._id = value;
+  }
+}
+// Name with SET and GET method as proberty
+public string Name {
+  get
+  {
+      return string.IsNullOrEmpty(this._name) ? "No Name" : this._name;
+  }
+  set
+  {
+      if (string.IsNullOrEmpty(value))
+      {
+          throw new Exception("Name must not be a NULL or empty value");
+      }
+      else
+          this._name = value;
+  }
+}
+// ID with GET method as proberty
+public int Passmark {
+  get
+  {
+      return this._passmark;
+  }
+}
+public string City{ get; set; }
+public string Email { get; set; }
+}
+*/
+
+/**/  //Lesson28
+      // Structs in c# 
+
+      /*
+public struct Customer
+{
+// fields
+int _id;
+string _name;
+
+
+
+// public proberties
+public string Name
+{
+    get
+    {
+        return _name;
     }
-    // Name with SET and GET method as proberty
-    public string Name {
-        get
-        {
-            return string.IsNullOrEmpty(this._name) ? "No Name" : this._name;
-        }
-        set
-        {
-            if (string.IsNullOrEmpty(value))
-            {
-                throw new Exception("Name must not be a NULL or empty value");
-            }
-            else
-                this._name = value;
-        }
+
+    set
+    {
+        _name = value;
     }
-    // ID with GET method as proberty
-    public int Passmark {
-        get
-        {
-            return this._passmark;
-        }
+}
+public int Id
+{
+    get
+    {
+        return _id;
     }
-    public string City{ get; set; }
-    public string Email { get; set; }
+
+    set
+    {
+        _id = value;
+    }
+}
+
+
+// constructor
+public Customer(int ID, string Name)
+{
+    this._id = ID;
+    this._name = Name;
+}
+
+// behavior (Methods)
+
+public void Print()
+{
+    Console.WriteLine("Customer ID :{0}, Name: {1}", this._id, this._name);
+}
 }
 */
