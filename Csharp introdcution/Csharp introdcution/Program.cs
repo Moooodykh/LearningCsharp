@@ -712,10 +712,17 @@ public class sampleclass
 
                       */
 
+        /**/  //Lesson27
+              // Properties in c# with SET and GET
+/*
+        Student st = new Student();
+        st.ID = 101;
+        st.Name = "MARK";
 
-
-
-
+        Console.WriteLine("Student ID : {0}",st.ID);
+        Console.WriteLine("Student Name : {0}", st.Name);
+        Console.WriteLine("Student Passmark : {0}", st.Passmark);
+        */
 
     }
 
@@ -1152,3 +1159,55 @@ public ChildClass()
           }
       }
       */
+
+
+/**/  //Lesson27
+      //properties in c# with SET and GET methods (SET and GET proberties)
+
+      /*
+    class Student
+{   string _name;
+    int _passmark = 35;
+    int _id;
+
+    // ID with SET and GET method as proberty
+    public int ID{
+        get {
+            return this._id;
+        }
+        set
+        {
+            if ( value <= 0)
+            {
+                throw new Exception("Student ID must be non negativ");
+            }
+            this._id = value;
+        }
+    }
+    // Name with SET and GET method as proberty
+    public string Name {
+        get
+        {
+            return string.IsNullOrEmpty(this._name) ? "No Name" : this._name;
+        }
+        set
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new Exception("Name must not be a NULL or empty value");
+            }
+            else
+                this._name = value;
+        }
+    }
+    // ID with GET method as proberty
+    public int Passmark {
+        get
+        {
+            return this._passmark;
+        }
+    }
+    public string City{ get; set; }
+    public string Email { get; set; }
+}
+*/
