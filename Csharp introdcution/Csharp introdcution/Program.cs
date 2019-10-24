@@ -746,78 +746,98 @@ public class sampleclass
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
-/*
-                                    // *Struct is a value type
-                                    // class is a refernce type
-                                    // *struct stored in Stack
-                                    // class stored in Heap
-                                    // *Value type destroyed after the end of it's scope
-                                    // refernce varible destroyed after the end of it's scope but the refernce object destroys when the garbage collector clean the HEAP
-                                    // *when you copy a struct to another the new copy is a defined object in it self and it will not effect the copy of it.
-                                    // classes when it copys each other it still refer to the same place in the memory 
-                                    // *struct can not have destructors while class CAN have
-                                    // *Struct can not have an expicit parameterless where class CAN
-                                    // *Struct can not inherit from another where class CAN (inherit is a SEALED type)
-                                    // Classes and structs(BOTH) can inherit from an interface
-                                    // Struct can not be a base inhertiance(parent class/struct) for a struct or class which means
-                                    // a class or struct can not be derived from a struct
+              /*
+                                                  // *Struct is a value type
+                                                  // class is a refernce type
+                                                  // *struct stored in Stack
+                                                  // class stored in Heap
+                                                  // *Value type destroyed after the end of it's scope
+                                                  // refernce varible destroyed after the end of it's scope but the refernce object destroys when the garbage collector clean the HEAP
+                                                  // *when you copy a struct to another the new copy is a defined object in it self and it will not effect the copy of it.
+                                                  // classes when it copys each other it still refer to the same place in the memory 
+                                                  // *struct can not have destructors while class CAN have
+                                                  // *Struct can not have an expicit parameterless where class CAN
+                                                  // *Struct can not inherit from another where class CAN (inherit is a SEALED type)
+                                                  // Classes and structs(BOTH) can inherit from an interface
+                                                  // Struct can not be a base inhertiance(parent class/struct) for a struct or class which means
+                                                  // a class or struct can not be derived from a struct
 
 
-                                    int i = 10;
-                                    if (i == 10)
-                                    {
-                                        int j = 20;
-                                        Customer c1 = new Customer();
-                                        c1.Id = 101;
-                                        c1.Name = "Paul";
-                                    }
+                                                  int i = 10;
+                                                  if (i == 10)
+                                                  {
+                                                      int j = 20;
+                                                      Customer c1 = new Customer();
+                                                      c1.Id = 101;
+                                                      c1.Name = "Paul";
+                                                  }
 
-                                    // i is a struct which destroyed in line 771
-                                    // j is a struct which destroyed in line 765 (must be available in if block and dies after IF statement)
-                                    // C1 is a refence object variable stored in stack but the object it self stored in HEAP.
+                                                  // i is a struct which destroyed in line 771
+                                                  // j is a struct which destroyed in line 765 (must be available in if block and dies after IF statement)
+                                                  // C1 is a refence object variable stored in stack but the object it self stored in HEAP.
 
-                                    int I = 10;
-                                    int J = i;
-                                    J++;
-                                    Console.WriteLine("I = {0}, J = {1} ",I,J);
-                                    // operations on J will not affect I because they are value type.Each varible will not affect the other because it refers to it's 
-                                    // own fixed place in the memory.
-                                    Customer C1 = new Customer();
-                                    C1.Id = 101;
-                                    C1.Name = "Paul";
+                                                  int I = 10;
+                                                  int J = i;
+                                                  J++;
+                                                  Console.WriteLine("I = {0}, J = {1} ",I,J);
+                                                  // operations on J will not affect I because they are value type.Each varible will not affect the other because it refers to it's 
+                                                  // own fixed place in the memory.
+                                                  Customer C1 = new Customer();
+                                                  C1.Id = 101;
+                                                  C1.Name = "Paul";
 
-                                    Customer C2 = C1;
-                                    C2.Name = "Mary";
-                                    Console.WriteLine("C1.Name = {0}, C2.Name = {1} ", C1.Name, C2.Name);
-                                    // operations on C1 will affect C2 because they are refence type.Each varible will affect the other because they refer to the same 
-                                    // place in the memory(same object).
-                            */
+                                                  Customer C2 = C1;
+                                                  C2.Name = "Mary";
+                                                  Console.WriteLine("C1.Name = {0}, C2.Name = {1} ", C1.Name, C2.Name);
+                                                  // operations on C1 will affect C2 because they are refence type.Each varible will affect the other because they refer to the same 
+                                                  // place in the memory(same object).
+                                          */
 
 
         /**/  //Lesson30
               //  Interface in c# 
- /*
-        // only contains a declaration not an implemntation/fields LIKE void Print();
-        // every interface member will be a public "We can not user public modifier"
-        // Interface can not have  fields
-        // class and struct can inherit multiple interface
-        // You can not make an object of the INTERFACE
-        Customer c1 = new Customer();
-        c1.print1();
-        c1.print2();
+              /*
+                     // only contains a declaration not an implemntation/fields LIKE void Print();
+                     // every interface member will be a public "We can not user public modifier"
+                     // Interface can not have  fields
+                     // class and struct can inherit multiple interface
+                     // You can not make an object of the INTERFACE
+                     Customer c1 = new Customer();
+                     c1.print1();
+                     c1.print2();
 
-        ICustomer2 C = new Customer();
-        C.print1();
-        C.print2();
+                     ICustomer2 C = new Customer();
+                     C.print1();
+                     C.print2();
+                     */
+
+
+        /**/  //Lesson31
+              //  Interface implementation in c# - USING EXPLICIT interface implementation
+
+   /*     Pro p = new Pro();
+        // this statement will call I1 interface method
+        ((I1)p).InterfaceMethod();
+        // this statement will call I2 interface method
+        ((I2)p).InterfaceMethod();
+
+        // or 
+        //-------------- we can also call them by using --------------
+        I1 P1 = new Pro();
+        I2 P2 = new Pro();
+        P1.InterfaceMethod();
+        P2.InterfaceMethod();
+
+        //-------------- we can have a default interface by implemnting it normally while the other will be implented explicitly --------------
+        Pro2 pp = new Pro2();
+        pp.InterfaceMethod(); // normally implemented  , line 1464
+        ((I1)pp).InterfaceMethod();// explicitly implemented, line 1469
         */
 
 
-
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
 
-        /**/  //Lesson29
-              //  Difference between classes and structs in c# 
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1265,7 +1285,7 @@ public ChildClass()
 /**/  //Lesson27
       //properties in c# with SET and GET methods (SET and GET proberties)
 
-      /*
+/*
 class Student
 {   string _name;
 int _passmark = 35;
@@ -1316,7 +1336,7 @@ public string Email { get; set; }
 /**/  //Lesson28
       // Structs in c# 
 
-      /*
+/*
 public struct Customer
 {
 // fields
@@ -1371,7 +1391,7 @@ Console.WriteLine("Customer ID :{0}, Name: {1}", this._id, this._name);
 /**/  //Lesson29
       //  Difference between classes and structs in c# 
 
-      /*
+/*
 public class Customer
 {
 public int Id { get; set; }
@@ -1414,11 +1434,49 @@ public class Customer :  ICustomer2
 
 
 
+/**/  //Lesson31
+      // Interface implementation in c# - using EXPLICIT INTERFACE IMPLEMNTATION
+      /*
+    interface I1
+{
+    void InterfaceMethod();
+}
+
+interface I2
+{
+    void InterfaceMethod();
+}
+
+class Pro : I1, I2
+{
+     void I2.InterfaceMethod()
+    {
+        Console.WriteLine("I2 method called");
+    }
+    // We delete the access modifier PUBLIC and refering to which interface is coming from
+    void I1.InterfaceMethod()
+    {
+        Console.WriteLine("I1 method called");
+    }
+}
+
+// --------------------- one interface normally implemented "DEFAULT WILL BE", While the second one is implemented EXPLICITLY
+class Pro2 : I1, I2
+{
+   public void InterfaceMethod()
+    {
+        Console.WriteLine("I2 method called");
+    }
+    // We delete the access modifier PUBLIC and refering to which interface is coming from
+    void I1.InterfaceMethod()
+    {
+        Console.WriteLine("I1 method called");
+    }
+}
 
 
-/**/  //Lesson30
-      //  Interfaces in c# 
 
+    */
 
 
 /**/  //Lesson30
