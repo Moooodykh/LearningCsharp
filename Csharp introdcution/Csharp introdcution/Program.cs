@@ -842,8 +842,11 @@ public class sampleclass
               */
 
 
-        /**/  //Lesson29
-              //  Difference between classes and structs in c# 
+        /**/  //Lesson35
+              //  Multiple class inheritance using interfaces in c# 
+        AB ab = new AB();
+        ab.MethodA();
+        ab.MethodB();
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1591,28 +1594,28 @@ void draw();
       //  Problems of multiple class inheritance in c# 
 
       /*
-    // This can cause an ambguity "DIAMOND PROBLEM"
-    class A
+// This can cause an ambguity "DIAMOND PROBLEM"
+class A
 {
-    public virtual void print() {
-        Console.WriteLine("A class");
-    }
+public virtual void print() {
+  Console.WriteLine("A class");
+}
 }
 
 class B : A
 {
-    public override void print()
-    {
-        Console.WriteLine("B class");
-    }
+public override void print()
+{
+  Console.WriteLine("B class");
+}
 }
 
 class C : A
 {
-    public override void print()
-    {
-        Console.WriteLine("C class");
-    }
+public override void print()
+{
+  Console.WriteLine("C class");
+}
 }
 
 class D : B,C
@@ -1624,8 +1627,61 @@ class D : B,C
 
 */
 
-/**/  //Lesson30
-      //  Interfaces in c# 
+/**/  //Lesson35
+      //  Multiple class inheritance using interfaces in c# 
+    
+      /*
+interface AI
+{
+    void MethodA();
+}
+class A : AI
+{
+   
+public void MethodA()
+    {
+        Console.WriteLine("Class A");
+    }
+}
+
+interface BI
+{
+    void MethodB();
+}
+class B : BI
+{
+
+    public void MethodB()
+    {
+        Console.WriteLine("Class B");
+    }
+    public void Print()
+    {
+        Console.WriteLine("Class B printing");
+    }
+
+}
+
+class AB : AI, BI
+{
+    A a = new A();
+    B b = new B();
+    public void MethodA()
+    {
+        // this will can MethodA implmentation that is located in Class A
+        a.MethodA();
+    }
+
+    public void MethodB()
+    {
+        // this will can MethodB implmentation that is located in Class B
+        b.MethodB();
+        
+    }
+}
+*/
+
+
 
 /**/  //Lesson30
       //  Interfaces in c# 
