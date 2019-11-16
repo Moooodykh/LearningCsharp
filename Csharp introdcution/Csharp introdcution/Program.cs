@@ -1519,7 +1519,7 @@ abstract class customer
 // this abstract class contains abstract method and non abstract method
 public void print()
 {
-  Console.WriteLine("Print from abstract class");
+Console.WriteLine("Print from abstract class");
 }
 // non abstract method "AS USUAL METHOD"
 public abstract void draw();
@@ -1532,7 +1532,7 @@ class shop : customer
 // this class is inheriting an abstract member so that we need to provide implemntation to all abstract member e.g draw method
 public override void draw()
 {
-  Console.WriteLine("Print from shop class");
+Console.WriteLine("Print from shop class");
 }
 }
 */
@@ -1541,54 +1541,88 @@ public override void draw()
       //  Difference between abstract classes and interfaces in c# 
 
       /*
-    abstract class customer : Icustomer, Ishope
+abstract class customer : Icustomer, Ishope
 {
-    //1. Abstract class can have an implemntation for some of its members while interface can not have implementation to any of its memebers 
-    //2. abstract class can have access modifier like public , private while interface can not
-    //3. abstract class can have fields while interface can not
-    //4. abstract class can have be inherited from other absract class or interface while interface can only inherited from an interface
-    //5. abstract class can inherit from multiple interfaces and not from multiple classes 
+//1. Abstract class can have an implemntation for some of its members while interface can not have implementation to any of its memebers 
+//2. abstract class can have access modifier like public , private while interface can not
+//3. abstract class can have fields while interface can not
+//4. abstract class can have be inherited from other absract class or interface while interface can only inherited from an interface
+//5. abstract class can inherit from multiple interfaces and not from multiple classes 
 
-    //1.
-    //2. 
-    public void print()
-    {
+//1.
+//2. 
+public void print()
+{
 
-    }
+}
 
-    public void draw()
-    {
-       
-    }
+public void draw()
+{
 
-    //3.
-    int ID;
+}
+
+//3.
+int ID;
 
 
 }
 
 interface Icustomer
 {
-    // 1. 
-    //2.
-    void print();
-    // this is error , can not implement a method { }
-    // we can not use access modifier
+// 1. 
+//2.
+void print();
+// this is error , can not implement a method { }
+// we can not use access modifier
 
 
-    // 3.interface can not contain fields
-    //int ID;
+// 3.interface can not contain fields
+//int ID;
 }
 interface Ishope
 {
-    void draw();
-    
+void draw();
+
 }
 
 */
 
-/**/  //Lesson30
-      //  Interfaces in c# 
+/**/  //Lesson34
+      //  Problems of multiple class inheritance in c# 
+
+      /*
+    // This can cause an ambguity "DIAMOND PROBLEM"
+    class A
+{
+    public virtual void print() {
+        Console.WriteLine("A class");
+    }
+}
+
+class B : A
+{
+    public override void print()
+    {
+        Console.WriteLine("B class");
+    }
+}
+
+class C : A
+{
+    public override void print()
+    {
+        Console.WriteLine("C class");
+    }
+}
+
+class D : B,C
+{
+
+}
+// If we suppose that D class in inheriting B or C class that means which method will be called in that case 
+// because both of methods are overriding class A print method.
+
+*/
 
 /**/  //Lesson30
       //  Interfaces in c# 
