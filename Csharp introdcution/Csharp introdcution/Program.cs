@@ -93,61 +93,61 @@
               // using opertators ?? null coalesing
 
         /*
-                                                            // WAY nr 1
-                                                            string namn = null;
-                                                            int counter = 5;
-                                                            int? i = null; // changing the value type to nullable 
-                                                            bool? Gender = null; // this means that Gender can be a null value , ? before BOOL added null value besides TRUE or FALSE
+               // WAY nr 1
+               string namn = null;
+               int counter = 5;
+               int? i = null; // changing the value type to nullable 
+               bool? Gender = null; // this means that Gender can be a null value , ? before BOOL added null value besides TRUE or FALSE
 
-                                                            if (Gender == true)
-                                                            {
-                                                                Console.WriteLine("You are Man");
-                                                            }
-                                                            else if (Gender == false)
-                                                            {
-                                                                Console.WriteLine("You are woman");
-                                                            }
-                                                            else
-                                                            {
-                                                                Console.WriteLine("User has not select any thing\n");
-                                                            }
+               if (Gender == true)
+               {
+                   Console.WriteLine("You are Man");
+               }
+               else if (Gender == false)
+               {
+                   Console.WriteLine("You are woman");
+               }
+               else
+               {
+                   Console.WriteLine("User has not select any thing\n");
+               }
 
-                                                            // WAY nr 2
+               // WAY nr 2
 
-                                                            int? TicketsonSale = 10000;
-                                                            int NumberofTickets;
-                                                            if (TicketsonSale == null)
-                                                            {
-                                                                Console.WriteLine("NumberofTickets is 0");
-                                                            }
-                                                            else 
-                                                            {
-                                                                NumberofTickets = (int)TicketsonSale; // this is correct because we convert nullable value to INT value
-                                                                int NumberofTickets2 = TicketsonSale.Value; //THis is correct because we are using value method that return int value
-                                                                Console.WriteLine("NumberofTickets is {0},",NumberofTickets);
-                                                            }
+               int? TicketsonSale = 10000;
+               int NumberofTickets;
+               if (TicketsonSale == null)
+               {
+                   Console.WriteLine("NumberofTickets is 0");
+               }
+               else 
+               {
+                   NumberofTickets = (int)TicketsonSale; // this is correct because we convert nullable value to INT value
+                   int NumberofTickets2 = TicketsonSale.Value; //THis is correct because we are using value method that return int value
+                   Console.WriteLine("NumberofTickets is {0},",NumberofTickets);
+               }
 
-                                                            // WAY nr 3
+               // WAY nr 3
 
-                                                            int? ticketsONSALE = null;
-                                                            int availableTickets = ticketsONSALE ?? 0;
-                                                            Console.WriteLine("NumberofTickets is ------{0}\n", availableTickets);
-
-
+               int? ticketsONSALE = null;
+               int availableTickets = ticketsONSALE ?? 0;
+               Console.WriteLine("NumberofTickets is ------{0}\n", availableTickets);
 
 
-                                                            //------------------ TRUE and FALSE -------SHORT IF STATMENT
-                                                            int number = 15;
-                                                            bool isnumberequals10 = number == 10 ? true : false;
-                                                            Console.WriteLine("Number is equals to 10 : {0}\n",isnumberequals10);
-                                                              /* OTHER EXAMPLE
-                                                            int? Ticketsonsale = null;
-                                                            int AvaailableTickets = Ticketsonsale ?? 0 ;
 
-                                                            bool? gender = null;
-                                                            bool man = gender ?? true;
-                                                            Console.Write("{0}\n\n", man);
-                                                            */
+
+               //------------------ TRUE and FALSE -------SHORT IF STATMENT
+               int number = 15;
+               bool isnumberequals10 = number == 10 ? true : false;
+               Console.WriteLine("Number is equals to 10 : {0}\n",isnumberequals10);
+                 /* OTHER EXAMPLE
+               int? Ticketsonsale = null;
+               int AvaailableTickets = Ticketsonsale ?? 0 ;
+
+               bool? gender = null;
+               bool man = gender ?? true;
+               Console.Write("{0}\n\n", man);
+               */
 
 
         /**/  //Lesson7 
@@ -421,38 +421,36 @@ public class sampleclass
         /**/  //Lesson14
               //DO -  WHILE loop
               /*
-                                  string userChoice = string.Empty;
+                   string userChoice = string.Empty;
 
-                                  do
-                                  {
-                                      Console.WriteLine("Please enter your target number");
-                                      int target = 0;
-                                      int userInput = int.Parse(Console.ReadLine());
+                   do
+                   {
+                       Console.WriteLine("Please enter your target number");
+                       int target = 0;
+                       int userInput = int.Parse(Console.ReadLine());
 
-                                      while (target <= userInput)
-                                      {
-                                          Console.Write("{0} ", target);
-                                          target += 2;
-                                      }
-                                      Console.WriteLine();
+                       while (target <= userInput)
+                       {
+                           Console.Write("{0} ", target);
+                           target += 2;
+                       }
+                       Console.WriteLine();
 
-                                      do
-                                      {
-                                          Console.WriteLine("Do you want to continue - YES or NO");
-                                          userChoice = Console.ReadLine();
-                                          if (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no")
-                                          {
-                                              Console.WriteLine("your choice is INVALID, type -  YES or NO");
-                                          }
+                       do
+                       {
+                           Console.WriteLine("Do you want to continue - YES or NO");
+                           userChoice = Console.ReadLine();
+                           if (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no")
+                           {
+                               Console.WriteLine("your choice is INVALID, type -  YES or NO");
+                           }
 
-                                      } while (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no");
-                                  } 
-
-
-                                  while (userChoice == "yes") ;
-                                 */
+                       } while (userChoice.ToLower() != "yes" && userChoice.ToLower() != "no");
+                   } 
 
 
+                   while (userChoice == "yes") ;
+                  */
 
         /**/  //Lesson15
               //for each loop
@@ -535,8 +533,7 @@ public class sampleclass
         /**/  //Lesson17
               //METHODS PARAMETERS
 
-        //1. ---------- passing by vaule ------------
-        /*      
+        /*     //1. ---------- passing by vaule ------------ 
                int i = 0;
                SimpleMethod(i);
                Console.WriteLine("Value of 'I' PASS BY VALUE  is : {0}", i);
@@ -597,7 +594,6 @@ public class sampleclass
 
         /**/  //Lesson20
               //Static and instance class members(events,methods,proberties) 
-
 
         /*
         Circle c1 = new Circle(5);
@@ -677,20 +673,21 @@ public class sampleclass
                    item.PrintFullName();
                }
                */
+
         /**/  //Lesson24
               // Difference between method overriding and method hiding in c#
               /*
-                                                  BaseClass B = new BaseClass();
-                                                  B.Print();
-                                                  // calling with OVERRIDE KEYWORD type in the derived class will call PRINT method in derived class
-                                                  // calling with NEW KEYWORD in the derived class will call PRINT method in base class and hide PRINT METHOD in the child
-                                                  BaseClass b = new DerivedClass();
-                                                  b.Print();
+                                                 BaseClass B = new BaseClass();
+                                                 B.Print();
+                                                 // calling with OVERRIDE KEYWORD type in the derived class will call PRINT method in derived class
+                                                 // calling with NEW KEYWORD in the derived class will call PRINT method in base class and hide PRINT METHOD in the child
+                                                 BaseClass b = new DerivedClass();
+                                                 b.Print();
 
-                                                  DerivedClass D = new DerivedClass();
-                                                  D.Print();
+                                                 DerivedClass D = new DerivedClass();
+                                                 D.Print();
 
-                                          */
+                */
 
         /**/  //Lesson25
               // Method overloading in c#
@@ -714,15 +711,16 @@ public class sampleclass
 
         /**/  //Lesson27
               // Properties in c# with SET and GET methods
-              /*
-                                                                              Student st = new Student();
-                                                                              st.ID = 101;
-                                                                              st.Name = "MARK";
 
-                                                                              Console.WriteLine("Student ID : {0}",st.ID);
-                                                                              Console.WriteLine("Student Name : {0}", st.Name);
-                                                                              Console.WriteLine("Student Passmark : {0}", st.Passmark);
-                                                                              */
+        /*
+               Student st = new Student();
+               st.ID = 101;
+               st.Name = "MARK";
+
+               Console.WriteLine("Student ID : {0}",st.ID);
+               Console.WriteLine("Student Name : {0}", st.Name);
+               Console.WriteLine("Student Passmark : {0}", st.Passmark);
+               */
 
         /**/  //Lesson28
               // Structs in c# 
@@ -747,52 +745,51 @@ public class sampleclass
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
               /*
-                                                  // *Struct is a value type
-                                                  // class is a refernce type
-                                                  // *struct stored in Stack
-                                                  // class stored in Heap
-                                                  // *Value type destroyed after the end of it's scope
-                                                  // refernce varible destroyed after the end of it's scope but the refernce object destroys when the garbage collector clean the HEAP
-                                                  // *when you copy a struct to another the new copy is a defined object in it self and it will not effect the copy of it.
-                                                  // classes when it copys each other it still refer to the same place in the memory 
-                                                  // *struct can not have destructors while class CAN have
-                                                  // *Struct can not have an expicit parameterless where class CAN
-                                                  // *Struct can not inherit from another where class CAN (inherit is a SEALED type)
-                                                  // Classes and structs(BOTH) can inherit from an interface
-                                                  // Struct can not be a base inhertiance(parent class/struct) for a struct or class which means
-                                                  // a class or struct can not be derived from a struct
+                     // *Struct is a value type
+                     // class is a refernce type
+                     // *struct stored in Stack
+                     // class stored in Heap
+                     // *Value type destroyed after the end of it's scope
+                     // refernce varible destroyed after the end of it's scope but the refernce object destroys when the garbage collector clean the HEAP
+                     // *when you copy a struct to another the new copy is a defined object in it self and it will not effect the copy of it.
+                     // classes when it copys each other it still refer to the same place in the memory 
+                     // *struct can not have destructors while class CAN have
+                     // *Struct can not have an expicit parameterless where class CAN
+                     // *Struct can not inherit from another where class CAN (inherit is a SEALED type)
+                     // Classes and structs(BOTH) can inherit from an interface
+                     // Struct can not be a base inhertiance(parent class/struct) for a struct or class which means
+                     // a class or struct can not be derived from a struct
 
 
-                                                  int i = 10;
-                                                  if (i == 10)
-                                                  {
-                                                      int j = 20;
-                                                      Customer c1 = new Customer();
-                                                      c1.Id = 101;
-                                                      c1.Name = "Paul";
-                                                  }
+                     int i = 10;
+                     if (i == 10)
+                     {
+                         int j = 20;
+                         Customer c1 = new Customer();
+                         c1.Id = 101;
+                         c1.Name = "Paul";
+                     }
 
-                                                  // i is a struct which destroyed in line 771
-                                                  // j is a struct which destroyed in line 765 (must be available in if block and dies after IF statement)
-                                                  // C1 is a refence object variable stored in stack but the object it self stored in HEAP.
+                     // i is a struct which destroyed in line 771
+                     // j is a struct which destroyed in line 765 (must be available in if block and dies after IF statement)
+                     // C1 is a refence object variable stored in stack but the object it self stored in HEAP.
 
-                                                  int I = 10;
-                                                  int J = i;
-                                                  J++;
-                                                  Console.WriteLine("I = {0}, J = {1} ",I,J);
-                                                  // operations on J will not affect I because they are value type.Each varible will not affect the other because it refers to it's 
-                                                  // own fixed place in the memory.
-                                                  Customer C1 = new Customer();
-                                                  C1.Id = 101;
-                                                  C1.Name = "Paul";
+                     int I = 10;
+                     int J = i;
+                     J++;
+                     Console.WriteLine("I = {0}, J = {1} ",I,J);
+                     // operations on J will not affect I because they are value type.Each varible will not affect the other because it refers to it's 
+                     // own fixed place in the memory.
+                     Customer C1 = new Customer();
+                     C1.Id = 101;
+                     C1.Name = "Paul";
 
-                                                  Customer C2 = C1;
-                                                  C2.Name = "Mary";
-                                                  Console.WriteLine("C1.Name = {0}, C2.Name = {1} ", C1.Name, C2.Name);
-                                                  // operations on C1 will affect C2 because they are refence type.Each varible will affect the other because they refer to the same 
-                                                  // place in the memory(same object).
-                                          */
-
+                     Customer C2 = C1;
+                     C2.Name = "Mary";
+                     Console.WriteLine("C1.Name = {0}, C2.Name = {1} ", C1.Name, C2.Name);
+                     // operations on C1 will affect C2 because they are refence type.Each varible will affect the other because they refer to the same 
+                     // place in the memory(same object).
+                                                        */
 
         /**/  //Lesson30
               //  Interface in c# 
@@ -811,33 +808,60 @@ public class sampleclass
                      C.print2();
                      */
 
-
         /**/  //Lesson31
               //  Interface implementation in c# - USING EXPLICIT interface implementation
 
-   /*     Pro p = new Pro();
-        // this statement will call I1 interface method
-        ((I1)p).InterfaceMethod();
-        // this statement will call I2 interface method
-        ((I2)p).InterfaceMethod();
+        /*   
+       Pro p = new Pro();
+       // this statement will call I1 interface method
+       ((I1)p).InterfaceMethod();
+       // this statement will call I2 interface method
+       ((I2)p).InterfaceMethod();
 
-        // or 
-        //-------------- we can also call them by using --------------
-        I1 P1 = new Pro();
-        I2 P2 = new Pro();
-        P1.InterfaceMethod();
-        P2.InterfaceMethod();
+       // or 
+       //-------------- we can also call them by using --------------
+       I1 P1 = new Pro();
+       I2 P2 = new Pro();
+       P1.InterfaceMethod();
+       P2.InterfaceMethod();
 
-        //-------------- we can have a default interface by implemnting it normally while the other will be implented explicitly --------------
-        Pro2 pp = new Pro2();
-        pp.InterfaceMethod(); // normally implemented  , line 1464
-        ((I1)pp).InterfaceMethod();// explicitly implemented, line 1469
-        */
+       //-------------- we can have a default interface by implemnting it normally while the other will be implented explicitly --------------
+       Pro2 pp = new Pro2();
+       pp.InterfaceMethod(); // normally implemented  , line 1464
+       ((I1)pp).InterfaceMethod();// explicitly implemented, line 1469
+       */
+
+        /**/  //Lesson32
+              //  Abstract classes in c#
+              /*
+              // this statement is wrong becasuse we can not instantialize an abstract class
+              //customer c = new customer();
+              shop s = new shop();
+              s.draw();
+              s.print();
+              */
 
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
 
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
+
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
+
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
+
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
+
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
+
+        /**/  //Lesson29
+              //  Difference between classes and structs in c# 
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1074,7 +1098,7 @@ public class sampleclass
       // Inheritance in c#
 
 //-------------------------- PART 1 ------------------------
-/*
+      /*
 // BASE CLASS -- PARENT CLASS
 
 public class Employee
@@ -1110,27 +1134,27 @@ public class A : FullTimeEmployee
 }
 */
 //-------------------------- PART 2 ------------------------
-/*
+      /*
 class ParentClass
 {
 public ParentClass()
 {
-  Console.WriteLine("Parent class called");
+Console.WriteLine("Parent class called");
 }
 public ParentClass(string Message)
 {
-  Console.WriteLine("Parent class called with string Message" + Message);
+Console.WriteLine("Parent class called with string Message" + Message);
 }
 }
 
 class ChildClass : ParentClass
 {
 public ChildClass() 
-  : base("Hello guys")
+: base("Hello guys")
 // this line of code calling the PARENT class constructor which contains String MESSAGE not the default one
 //* When there is no  : base("Hello guys") line so it will take the default constructor from the PARENT CLASS
 {
-  Console.WriteLine("Child class called");
+Console.WriteLine("Child class called");
 }
 }
 
@@ -1171,121 +1195,121 @@ public ChildClass()
 /**/  //Lesson23
       // Polymorphism in c#
       /*
-          // Parent class
+      // Parent class
 
-      class Employee
+  class Employee
+  {
+      public string _firstname = "FN";
+      public string _lastname = "LN";
+
+      //virtual  is used to mention that method can be overriden by child class which contains the same name of method
+      public virtual void PrintFullName()
       {
-          public string _firstname = "FN";
-          public string _lastname = "LN";
+          Console.WriteLine(this._firstname + " " + this._lastname);
+      }
+  }
 
-          //virtual  is used to mention that method can be overriden by child class which contains the same name of method
-          public virtual void PrintFullName()
-          {
-              Console.WriteLine(this._firstname + " " + this._lastname);
-          }
+  // CHILD CLASSES
+  class TemporaryEmployee : Employee
+  {
+      public override void PrintFullName()
+      {
+          Console.WriteLine(this._firstname + " " + this._lastname + "-- Temperary Employee");
+      }
+  }
+  class PartTimeEmployee : Employee
+  {
+      public override void PrintFullName()
+      {
+          Console.WriteLine(this._firstname + " " + this._lastname + "-- Part Time Employee");
       }
 
-      // CHILD CLASSES
-      class TemporaryEmployee : Employee
+  }
+  class FullTimeEmployee : Employee
+  {
+      public override void PrintFullName()
       {
-          public override void PrintFullName()
-          {
-              Console.WriteLine(this._firstname + " " + this._lastname + "-- Temperary Employee");
-          }
+          Console.WriteLine(this._firstname + " " + this._lastname + "-- Full Time Employee");
       }
-      class PartTimeEmployee : Employee
-      {
-          public override void PrintFullName()
-          {
-              Console.WriteLine(this._firstname + " " + this._lastname + "-- Part Time Employee");
-          }
+  }
 
-      }
-      class FullTimeEmployee : Employee
-      {
-          public override void PrintFullName()
-          {
-              Console.WriteLine(this._firstname + " " + this._lastname + "-- Full Time Employee");
-          }
-      }
-
-      */
+  */
 
 
 /**/  //Lesson24
       // Difference between method overriding and method hiding in c#
       /*
-      class BaseClass
-      {
-          public virtual void Print()
-          {
-              Console.WriteLine("Base class method called");
-          }
-      }
-      class DerivedClass : BaseClass
-      {
-          public override void Print() //OR new void Print()
-          {
-              Console.WriteLine("Derived class method called");
-          }
-      }
-      */
+    class BaseClass
+    {
+        public virtual void Print()
+        {
+            Console.WriteLine("Base class method called");
+        }
+    }
+    class DerivedClass : BaseClass
+    {
+        public override void Print() //OR new void Print()
+        {
+            Console.WriteLine("Derived class method called");
+        }
+    }
+    */
 
 
 /**/  //Lesson26
       // Why properties in c#
       /*
-          class Student
-      {
-         int _studentID;
-         string _name;
-         int _markpass = 35;
+        class Student
+    {
+       int _studentID;
+       string _name;
+       int _markpass = 35;
 
-          // -------------- ID -----------------
-          public void SetID(int ID)
-          {
-              if (ID <= 0)
-              {
-                  throw new Exception("Student ID must be non negative value");
-              }
-              this._studentID = ID;
-          }
-      public int GetID()
-          {
-              return this._studentID;
-          }
-          // -------------- NAME -----------------
-          public void SetName(string NAME)
-          {
-              if(string.IsNullOrEmpty(NAME)== true)
-              {
-                  throw new Exception("Name can not be set to NULL");
-              }
-              this._name = NAME;
-          }
-          public string GetName()
-          {
-           return string.IsNullOrEmpty(this._name) ? "\"No Name\"" : this._name;
+        // -------------- ID -----------------
+        public void SetID(int ID)
+        {
+            if (ID <= 0)
+            {
+                throw new Exception("Student ID must be non negative value");
+            }
+            this._studentID = ID;
+        }
+    public int GetID()
+        {
+            return this._studentID;
+        }
+        // -------------- NAME -----------------
+        public void SetName(string NAME)
+        {
+            if(string.IsNullOrEmpty(NAME)== true)
+            {
+                throw new Exception("Name can not be set to NULL");
+            }
+            this._name = NAME;
+        }
+        public string GetName()
+        {
+         return string.IsNullOrEmpty(this._name) ? "\"No Name\"" : this._name;
 
-          }
-          // -------------- Pass Mark -----------------
-          public int GetPassMark()
-          {
-              return this._markpass;
-          }
+        }
+        // -------------- Pass Mark -----------------
+        public int GetPassMark()
+        {
+            return this._markpass;
+        }
 
-          public void Print()
-          {
-              Console.WriteLine("Student ID: {0} , Name: {1}, PassMark: {2}",GetID(),GetName(),GetPassMark());
-          }
-      }
-      */
+        public void Print()
+        {
+            Console.WriteLine("Student ID: {0} , Name: {1}, PassMark: {2}",GetID(),GetName(),GetPassMark());
+        }
+    }
+    */
 
 
 /**/  //Lesson27
       //properties in c# with SET and GET methods (SET and GET proberties)
 
-/*
+      /*
 class Student
 {   string _name;
 int _passmark = 35;
@@ -1298,7 +1322,7 @@ return this._id;
 }
 set
 {
-if ( value <= 0)
+if (value <= 0)
 {
 throw new Exception("Student ID must be non negativ");
 }
@@ -1336,7 +1360,7 @@ public string Email { get; set; }
 /**/  //Lesson28
       // Structs in c# 
 
-/*
+      /*
 public struct Customer
 {
 // fields
@@ -1391,7 +1415,7 @@ Console.WriteLine("Customer ID :{0}, Name: {1}", this._id, this._name);
 /**/  //Lesson29
       //  Difference between classes and structs in c# 
 
-/*
+      /*
 public class Customer
 {
 public int Id { get; set; }
@@ -1403,86 +1427,151 @@ public string Name { get; set; }
 /**/  //Lesson30
       //  Interfaces in c# 
       /*
-interface ICustomer1
-{
-    // no implementation , just a declaration 
-    void print1();
-}
-
-interface ICustomer2 : ICustomer1
-{
-    void print2();
-}
-
-public class Customer :  ICustomer2
-{
-    // this class shoud prvide implementation because it inherits INTERFACE
-    // the signature of the method found in the interface shall match the signature of the class PRINT()
-    
-        // this method must be implement here because of the inheritance of ICustomer1.
-    public void print1()
+    interface ICustomer1
     {
-        Console.WriteLine("Print 1");
+        // no implementation , just a declaration 
+        void print1();
     }
 
-    public void print2()
+    interface ICustomer2 : ICustomer1
     {
-        Console.WriteLine("Print 2");
+        void print2();
     }
-}
-*/
+
+    public class Customer :  ICustomer2
+    {
+        // this class shoud prvide implementation because it inherits INTERFACE
+        // the signature of the method found in the interface shall match the signature of the class PRINT()
+
+            // this method must be implement here because of the inheritance of ICustomer1.
+        public void print1()
+        {
+            Console.WriteLine("Print 1");
+        }
+
+        public void print2()
+        {
+            Console.WriteLine("Print 2");
+        }
+    }
+    */
 
 
 
 /**/  //Lesson31
       // Interface implementation in c# - using EXPLICIT INTERFACE IMPLEMNTATION
       /*
-    interface I1
+          interface I1
+      {
+          void InterfaceMethod();
+      }
+
+      interface I2
+      {
+          void InterfaceMethod();
+      }
+
+      class Pro : I1, I2
+      {
+           void I2.InterfaceMethod()
+          {
+              Console.WriteLine("I2 method called");
+          }
+          // We delete the access modifier PUBLIC and refering to which interface is coming from
+          void I1.InterfaceMethod()
+          {
+              Console.WriteLine("I1 method called");
+          }
+      }
+
+      // --------------------- one interface normally implemented "DEFAULT WILL BE", While the second one is implemented EXPLICITLY
+      class Pro2 : I1, I2
+      {
+         public void InterfaceMethod()
+          {
+              Console.WriteLine("I2 method called");
+          }
+
+          // We delete the access modifier PUBLIC and refering to which interface is coming from
+          void I1.InterfaceMethod()
+          {
+              Console.WriteLine("I1 method called");
+          }
+      }
+
+
+
+          */
+
+
+/**/  //Lesson32
+      //  Abstract classes in c# 
+      // abstract class is used as base class which can be inherited from other classes
+      // abstract class is incomplete and can not be instantiated 
+      // abstract = base class => can not be sealed(can not be inherited)
+      // non abstract class can inherit from an abstract class but it must privide that abstract class implemntation to all abstract members
+      // abstract class can contain abstract and non abstract members(methods,properties,indexers and events).
+
+   abstract class customer
 {
-    void InterfaceMethod();
+    // this abstract class contains abstract method and non abstract method
+    public void print()
+    {
+        Console.WriteLine("Print from abstract class");
+    }
+    // non abstract method "AS USUAL METHOD"
+    public abstract void draw();
+    // Abstract method can not contain implementation
+
 }
 
-interface I2
+class shop : customer
 {
-    void InterfaceMethod();
-}
-
-class Pro : I1, I2
-{
-     void I2.InterfaceMethod()
+    // this class is inheriting an abstract member so that we need to provide implemntation to all abstract member e.g draw method
+    public override void draw()
     {
-        Console.WriteLine("I2 method called");
-    }
-    // We delete the access modifier PUBLIC and refering to which interface is coming from
-    void I1.InterfaceMethod()
-    {
-        Console.WriteLine("I1 method called");
-    }
-}
-
-// --------------------- one interface normally implemented "DEFAULT WILL BE", While the second one is implemented EXPLICITLY
-class Pro2 : I1, I2
-{
-   public void InterfaceMethod()
-    {
-        Console.WriteLine("I2 method called");
-    }
-    // We delete the access modifier PUBLIC and refering to which interface is coming from
-    void I1.InterfaceMethod()
-    {
-        Console.WriteLine("I1 method called");
+        Console.WriteLine("Print from shop class");
     }
 }
 
 
-
-    */
 
 
 /**/  //Lesson30
       //  Interfaces in c# 
 
+/**/  //Lesson30
+      //  Interfaces in c# 
 
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
+
+/**/  //Lesson30
+      //  Interfaces in c# 
 
 /**/  //Lesson30
       //  Interfaces in c# 
