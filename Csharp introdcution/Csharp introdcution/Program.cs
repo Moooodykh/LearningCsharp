@@ -1098,7 +1098,7 @@ public class sampleclass
       // Inheritance in c#
 
 //-------------------------- PART 1 ------------------------
-      /*
+/*
 // BASE CLASS -- PARENT CLASS
 
 public class Employee
@@ -1134,7 +1134,7 @@ public class A : FullTimeEmployee
 }
 */
 //-------------------------- PART 2 ------------------------
-      /*
+/*
 class ParentClass
 {
 public ParentClass()
@@ -1309,7 +1309,7 @@ Console.WriteLine("Child class called");
 /**/  //Lesson27
       //properties in c# with SET and GET methods (SET and GET proberties)
 
-      /*
+/*
 class Student
 {   string _name;
 int _passmark = 35;
@@ -1360,7 +1360,7 @@ public string Email { get; set; }
 /**/  //Lesson28
       // Structs in c# 
 
-      /*
+/*
 public struct Customer
 {
 // fields
@@ -1415,7 +1415,7 @@ Console.WriteLine("Customer ID :{0}, Name: {1}", this._id, this._name);
 /**/  //Lesson29
       //  Difference between classes and structs in c# 
 
-      /*
+/*
 public class Customer
 {
 public int Id { get; set; }
@@ -1506,39 +1506,86 @@ public string Name { get; set; }
 
 /**/  //Lesson32
       //  Abstract classes in c# 
-      // abstract class is used as base class which can be inherited from other classes
-      // abstract class is incomplete and can not be instantiated 
-      // abstract = base class => can not be sealed(can not be inherited)
-      // non abstract class can inherit from an abstract class but it must privide that abstract class implemntation to all abstract members
-      // abstract class can contain abstract and non abstract members(methods,properties,indexers and events).
 
-   abstract class customer
+      /*
+// abstract class is used as base class which can be inherited from other classes
+// abstract class is incomplete and can not be instantiated 
+// abstract = base class => can not be sealed(can not be inherited)
+// non abstract class can inherit from an abstract class but it must privide that abstract class implemntation to all abstract members
+// abstract class can contain abstract and non abstract members(methods,properties,indexers and events).
+
+abstract class customer
 {
-    // this abstract class contains abstract method and non abstract method
-    public void print()
-    {
-        Console.WriteLine("Print from abstract class");
-    }
-    // non abstract method "AS USUAL METHOD"
-    public abstract void draw();
-    // Abstract method can not contain implementation
+// this abstract class contains abstract method and non abstract method
+public void print()
+{
+  Console.WriteLine("Print from abstract class");
+}
+// non abstract method "AS USUAL METHOD"
+public abstract void draw();
+// Abstract method can not contain implementation
 
 }
 
 class shop : customer
 {
-    // this class is inheriting an abstract member so that we need to provide implemntation to all abstract member e.g draw method
-    public override void draw()
+// this class is inheriting an abstract member so that we need to provide implemntation to all abstract member e.g draw method
+public override void draw()
+{
+  Console.WriteLine("Print from shop class");
+}
+}
+*/
+
+/**/  //Lesson33
+      //  Difference between abstract classes and interfaces in c# 
+
+      /*
+    abstract class customer : Icustomer, Ishope
+{
+    //1. Abstract class can have an implemntation for some of its members while interface can not have implementation to any of its memebers 
+    //2. abstract class can have access modifier like public , private while interface can not
+    //3. abstract class can have fields while interface can not
+    //4. abstract class can have be inherited from other absract class or interface while interface can only inherited from an interface
+    //5. abstract class can inherit from multiple interfaces and not from multiple classes 
+
+    //1.
+    //2. 
+    public void print()
     {
-        Console.WriteLine("Print from shop class");
+
     }
+
+    public void draw()
+    {
+       
+    }
+
+    //3.
+    int ID;
+
+
 }
 
+interface Icustomer
+{
+    // 1. 
+    //2.
+    void print();
+    // this is error , can not implement a method { }
+    // we can not use access modifier
 
 
+    // 3.interface can not contain fields
+    //int ID;
+}
+interface Ishope
+{
+    void draw();
+    
+}
 
-/**/  //Lesson30
-      //  Interfaces in c# 
+*/
 
 /**/  //Lesson30
       //  Interfaces in c# 
