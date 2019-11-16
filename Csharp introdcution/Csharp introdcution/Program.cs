@@ -1510,7 +1510,7 @@ public string Name { get; set; }
 /**/  //Lesson32
       //  Abstract classes in c# 
 
-      /*
+/*
 // abstract class is used as base class which can be inherited from other classes
 // abstract class is incomplete and can not be instantiated 
 // abstract = base class => can not be sealed(can not be inherited)
@@ -1543,7 +1543,7 @@ Console.WriteLine("Print from shop class");
 /**/  //Lesson33
       //  Difference between abstract classes and interfaces in c# 
 
-      /*
+/*
 abstract class customer : Icustomer, Ishope
 {
 //1. Abstract class can have an implemntation for some of its members while interface can not have implementation to any of its memebers 
@@ -1593,12 +1593,12 @@ void draw();
 /**/  //Lesson34
       //  Problems of multiple class inheritance in c# 
 
-      /*
+/*
 // This can cause an ambguity "DIAMOND PROBLEM"
 class A
 {
 public virtual void print() {
-  Console.WriteLine("A class");
+Console.WriteLine("A class");
 }
 }
 
@@ -1606,7 +1606,7 @@ class B : A
 {
 public override void print()
 {
-  Console.WriteLine("B class");
+Console.WriteLine("B class");
 }
 }
 
@@ -1614,7 +1614,7 @@ class C : A
 {
 public override void print()
 {
-  Console.WriteLine("C class");
+Console.WriteLine("C class");
 }
 }
 
@@ -1629,62 +1629,62 @@ class D : B,C
 
 /**/  //Lesson35
       //  Multiple class inheritance using interfaces in c# 
-    
-      /*
+
+/*
 interface AI
 {
-    void MethodA();
+void MethodA();
 }
 class A : AI
 {
-   
+
 public void MethodA()
-    {
-        Console.WriteLine("Class A");
-    }
+{
+  Console.WriteLine("Class A");
+}
 }
 
 interface BI
 {
-    void MethodB();
+void MethodB();
 }
 class B : BI
 {
 
-    public void MethodB()
-    {
-        Console.WriteLine("Class B");
-    }
-    public void Print()
-    {
-        Console.WriteLine("Class B printing");
-    }
+public void MethodB()
+{
+  Console.WriteLine("Class B");
+}
+public void Print()
+{
+  Console.WriteLine("Class B printing");
+}
 
 }
 
 class AB : AI, BI
 {
-    A a = new A();
-    B b = new B();
-    public void MethodA()
-    {
-        // this will can MethodA implmentation that is located in Class A
-        a.MethodA();
-    }
+A a = new A();
+B b = new B();
+public void MethodA()
+{
+  // this will can MethodA implmentation that is located in Class A
+  a.MethodA();
+}
 
-    public void MethodB()
-    {
-        // this will can MethodB implmentation that is located in Class B
-        b.MethodB();
-        
-    }
+public void MethodB()
+{
+  // this will can MethodB implmentation that is located in Class B
+  b.MethodB();
+
+}
 }
 */
 
 
 
-/**/  //Lesson30
-      //  Interfaces in c# 
+/**/  //Lesson36
+      //  Delegates in c# 
 
 /**/  //Lesson30
       //  Interfaces in c# 
