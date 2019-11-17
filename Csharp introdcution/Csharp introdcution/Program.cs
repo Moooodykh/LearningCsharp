@@ -844,12 +844,15 @@ public class sampleclass
 
         /**/  //Lesson35
               //  Multiple class inheritance using interfaces in c# 
-        AB ab = new AB();
-        ab.MethodA();
-        ab.MethodB();
-
-        /**/  //Lesson29
-              //  Difference between classes and structs in c# 
+              /* AB ab = new AB();
+               ab.MethodA();
+               ab.MethodB(); */
+              /**/  //Lesson36
+                    //  Delegates  in c# 
+     /*   Program p = new Program();
+        HelloDelgate del = new HelloDelgate(p.Hello);
+        del("Welcome from Delegate");
+        */
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1002,7 +1005,14 @@ public class sampleclass
 
        */
 
-
+    /**/  //Lesson36
+          //  Delegates  in c# 
+    /*
+    public void Hello(string MessageInput)
+    {
+        Console.WriteLine(MessageInput);
+    }
+    */
 }
 
 // ------------------------------------- CLASSES NOT IN MAIN ---------------------------------------------------
@@ -1682,10 +1692,12 @@ public void MethodB()
 */
 
 
-
 /**/  //Lesson36
       //  Delegates in c# 
 
+       /*
+public delegate void HelloDelgate(string Message);
+*/
 /**/  //Lesson30
       //  Interfaces in c# 
 
