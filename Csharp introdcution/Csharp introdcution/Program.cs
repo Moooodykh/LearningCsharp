@@ -849,10 +849,20 @@ public class sampleclass
                ab.MethodB(); */
               /**/  //Lesson36
                     //  Delegates  in c# 
-     /*   Program p = new Program();
-        HelloDelgate del = new HelloDelgate(p.Hello);
-        del("Welcome from Delegate");
-        */
+                    /*   Program p = new Program();
+                       HelloDelgate del = new HelloDelgate(p.Hello);
+                       del("Welcome from Delegate");
+                       */
+
+        /**/  //Lesson37
+              //  Delegates usage in c# Part 1 
+
+
+        /**/  //Lesson38
+              //  Delegates usage in c# Part 2
+
+        /**/  //Lesson36
+              //  Delegates  in c# 
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1007,12 +1017,12 @@ public class sampleclass
 
     /**/  //Lesson36
           //  Delegates  in c# 
-    /*
-    public void Hello(string MessageInput)
-    {
-        Console.WriteLine(MessageInput);
-    }
-    */
+          /*
+          public void Hello(string MessageInput)
+          {
+              Console.WriteLine(MessageInput);
+          }
+          */
 }
 
 // ------------------------------------- CLASSES NOT IN MAIN ---------------------------------------------------
@@ -1695,11 +1705,17 @@ public void MethodB()
 /**/  //Lesson36
       //  Delegates in c# 
 
-       /*
+/*
 public delegate void HelloDelgate(string Message);
 */
-/**/  //Lesson30
-      //  Interfaces in c# 
+
+/**/  //Lesson36
+      //  Delegates usage in c# PART 1
+
+
+
+/**/  //Lesson37
+      //  Delegates usage in c# PART 2
 
 /**/  //Lesson30
       //  Interfaces in c# 
