@@ -856,13 +856,16 @@ public class sampleclass
 
         /**/  //Lesson37
               //  Delegates usage in c# Part 1 
-
+       // All files needed is located under
+       // LearningCsharp\lesson 37
 
         /**/  //Lesson38
               //  Delegates usage in c# Part 2
+       // All files needed is located under
+       // LearningCsharp\lesson 38
 
-        /**/  //Lesson36
-              //  Delegates  in c# 
+              /**/  //Lesson36
+                    //  Delegates  in c# 
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -1712,10 +1715,16 @@ public delegate void HelloDelgate(string Message);
 /**/  //Lesson36
       //  Delegates usage in c# PART 1
 
+// All files needed is located under
+// LearningCsharp\lesson 37
 
 
 /**/  //Lesson37
       //  Delegates usage in c# PART 2
+
+// All files needed is located under
+// LearningCsharp\lesson 38
+
 
 /**/  //Lesson30
       //  Interfaces in c# 
