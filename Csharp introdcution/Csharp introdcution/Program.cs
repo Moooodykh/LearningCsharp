@@ -856,19 +856,20 @@ public class sampleclass
 
         /**/  //Lesson37
               //  Delegates usage in c# Part 1 
-       // All files needed is located under
-       // LearningCsharp\lesson 37
+              // All files needed is located under
+              // LearningCsharp\lesson 37
 
         /**/  //Lesson38
               //  Delegates usage in c# Part 2
-       // All files needed is located under
-       // LearningCsharp\lesson 38
+              // All files needed is located under
+              // LearningCsharp\lesson 38
 
-              /**/  //Lesson36
-                    //  Delegates  in c# 
 
-        /**/  //Lesson29
-              //  Difference between classes and structs in c# 
+        /**/  //Lesson39
+              //  Multicast Delegates  in c# 
+              // All files needed is located under
+              // LearningCsharp\lesson 39
+
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
