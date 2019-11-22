@@ -10,3 +10,9 @@ C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp int
 C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe
 C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.pdb
 C:\Users\Station\Documents\Visual Studio 2015\Projects\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.csprojResolveAssemblyReference.cache
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe.config
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.exe
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\bin\Debug\Csharp introdcution.pdb
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.csprojAssemblyReference.cache
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.exe
+C:\Users\mkharbou\Source\Repos\LearningCsharp\Csharp introdcution\Csharp introdcution\obj\Debug\Csharp introdcution.pdb

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
     
 
     class Program
@@ -794,19 +795,19 @@ public class sampleclass
         /**/  //Lesson30
               //  Interface in c# 
               /*
-                     // only contains a declaration not an implemntation/fields LIKE void Print();
-                     // every interface member will be a public "We can not user public modifier"
-                     // Interface can not have  fields
-                     // class and struct can inherit multiple interface
-                     // You can not make an object of the INTERFACE
-                     Customer c1 = new Customer();
-                     c1.print1();
-                     c1.print2();
+                      // only contains a declaration not an implemntation/fields LIKE void Print();
+                      // every interface member will be a public "We can not user public modifier"
+                      // Interface can not have  fields
+                      // class and struct can inherit multiple interface
+                      // You can not make an object of the INTERFACE
+                      Customer c1 = new Customer();
+                      c1.print1();
+                      c1.print2();
 
-                     ICustomer2 C = new Customer();
-                     C.print1();
-                     C.print2();
-                     */
+                      ICustomer2 C = new Customer();
+                      C.print1();
+                      C.print2();
+                      */
 
         /**/  //Lesson31
               //  Interface implementation in c# - USING EXPLICIT interface implementation
@@ -870,9 +871,62 @@ public class sampleclass
               // All files needed is located under
               // LearningCsharp\lesson 39
 
+        /**/  //Lesson40
+              //  Exception Handling in C#
+              // If we need to read or write to a file we need a STREAMREADER which we can find under SYSTEM.IO
+              // ADO.net how to use exception information to hack a program
 
-        /**/  //Lesson29
-              //  Difference between classes and structs in c# 
+
+              // I need define Streamreader as null to be a public variable
+        StreamReader SReader = null;
+        try
+        {
+             SReader = new StreamReader(@"C:\Users\mkharbou\source\repos\LearningCsharp\lesson 40\Data1.txt");
+            //StreamReader SReader = new StreamReader(@"C:\Area MK\Data.txt");
+            Console.WriteLine(SReader.ReadToEnd());
+           
+        }
+
+        /// -------------STRUCT WAY --------------- SPECEFIC EXCEPTIONS AT TOP ---------- GENERAL EXCEPTION AT BOTTOM
+        /// OTHER WISE IT WILL THROW AN ERROR
+        catch (FileNotFoundException ex)
+        {
+            // showing the actual message
+            Console.WriteLine(ex.Message);
+            Console.WriteLine("-------------------");
+            //showing the file name
+            Console.WriteLine(ex.FileName);
+            Console.WriteLine("-------------------");
+            // showing the all stack information and which line is containing the error
+            Console.WriteLine(ex.StackTrace);
+            Console.WriteLine("-------------------");
+            // showing the library source
+            Console.WriteLine(ex.Source);
+            Console.WriteLine("-------------------");
+            // Showing which is the mother method that called
+            Console.WriteLine(ex.TargetSite);
+         
+        }
+        // this other catch if somebody change the path
+        catch(Exception ex)
+        {
+            Console.WriteLine("Please check that you have a correct path");
+            Console.WriteLine(ex.Message);
+            
+        }
+        // this is used to release the resourses
+        finally
+        { /// this part of code will be excuted at the end even if there is no exception.
+            if (SReader != null)
+            {
+                SReader.Close();
+            }
+            Console.WriteLine("Finally block");
+            // if this is located here after calling all catch blocks so it will come here to release all resources otherwise
+            // the streamreader will not be realsed
+            
+        }
+
 
         /**/  //Lesson29
               //  Difference between classes and structs in c# 
@@ -970,54 +1024,54 @@ public class sampleclass
           // Method overloading in c#
 
     /*
-       public static void  add(int FN, int SN, int TN)
-       {
-           Console.WriteLine("Sum = {0}", FN + SN + TN);
-       }
+        public static void  add(int FN, int SN, int TN)
+        {
+            Console.WriteLine("Sum = {0}", FN + SN + TN);
+        }
 
-       // overloading is possbile because this method contains not the same amount of arguments
-       public static void add(int FN, int SN)
-       {
-           Console.WriteLine("Sum = {0}", FN + SN );
-       }
+        // overloading is possbile because this method contains not the same amount of arguments
+        public static void add(int FN, int SN)
+        {
+            Console.WriteLine("Sum = {0}", FN + SN );
+        }
 
-       // overloading is possbile because the Type of parameter is differ from the first method(float SN)
-       public static void add(int FN,float SN, int TN)
-       {
-           Console.WriteLine("Sum = {0}", FN + SN + TN);
-       }
+        // overloading is possbile because the Type of parameter is differ from the first method(float SN)
+        public static void add(int FN,float SN, int TN)
+        {
+            Console.WriteLine("Sum = {0}", FN + SN + TN);
+        }
 
-       // overloading is possbile because the Type of parameter is differ from the first method (out int TN)
-       public static void add(int FN, int SN, out int TN)
-       {
-           Console.WriteLine("Sum = {0}", FN + SN );
-           TN = FN + SN;
-       }
+        // overloading is possbile because the Type of parameter is differ from the first method (out int TN)
+        public static void add(int FN, int SN, out int TN)
+        {
+            Console.WriteLine("Sum = {0}", FN + SN );
+            TN = FN + SN;
+        }
 
-       // overloading is not possbile if we have the same method but different type (from VOID to INT) or have a PARAMS modifier
-       //---------------------------------MAIN Example (from VOID to INT)------------------------------------
-       public static void Sub(int FN, int SN)
-       {
-           Console.WriteLine("Sum = {0}", FN - SN);
-       }
-       // this will be ERROR (the same method but different returning type)
-       public static int Sub(int FN, int SN)
-       {
-           Console.WriteLine("Sum = {0}", FN - SN);
-           return FN - SN;
-       }
-       //------------------------  PARAMS ----------------------------
-       public void Mul(int FN,params int[] SN)
-       {
-           Console.WriteLine("Sum = {0}");
-       }
-       public int Mul(int FN, int[] SN)
-       {
-           Console.WriteLine("Sum = {0}");
-           return FN ;
-       }
+        // overloading is not possbile if we have the same method but different type (from VOID to INT) or have a PARAMS modifier
+        //---------------------------------MAIN Example (from VOID to INT)------------------------------------
+        public static void Sub(int FN, int SN)
+        {
+            Console.WriteLine("Sum = {0}", FN - SN);
+        }
+        // this will be ERROR (the same method but different returning type)
+        public static int Sub(int FN, int SN)
+        {
+            Console.WriteLine("Sum = {0}", FN - SN);
+            return FN - SN;
+        }
+        //------------------------  PARAMS ----------------------------
+        public void Mul(int FN,params int[] SN)
+        {
+            Console.WriteLine("Sum = {0}");
+        }
+        public int Mul(int FN, int[] SN)
+        {
+            Console.WriteLine("Sum = {0}");
+            return FN ;
+        }
 
-       */
+        */
 
     /**/  //Lesson36
           //  Delegates  in c# 
@@ -1027,12 +1081,14 @@ public class sampleclass
               Console.WriteLine(MessageInput);
           }
           */
+
+
 }
 
 // ------------------------------------- CLASSES NOT IN MAIN ---------------------------------------------------
 /**/  //Lesson19
       //Introduction to classes
-      /*
+        /*
              * class Customer
            {
                //-------------- class attributes --------------
@@ -1087,7 +1143,7 @@ public class sampleclass
 
 /**/  //Lesson20
       //Static and instance class members(events,methods,proberties) 
-      /*
+        /*
      class Circle
      {
          // proberties
@@ -1125,7 +1181,7 @@ public class sampleclass
       // Inheritance in c#
 
 //-------------------------- PART 1 ------------------------
-/*
+        /*
 // BASE CLASS -- PARENT CLASS
 
 public class Employee
@@ -1161,7 +1217,7 @@ public class A : FullTimeEmployee
 }
 */
 //-------------------------- PART 2 ------------------------
-/*
+        /*
 class ParentClass
 {
 public ParentClass()
@@ -1189,7 +1245,7 @@ Console.WriteLine("Child class called");
 
 /**/  //Lesson22
       // Method hiding in c#
-      /*
+        /*
           //PARENT CLASS
           class Employee
       {
@@ -1221,7 +1277,7 @@ Console.WriteLine("Child class called");
 
 /**/  //Lesson23
       // Polymorphism in c#
-      /*
+        /*
       // Parent class
 
   class Employee
@@ -1265,7 +1321,7 @@ Console.WriteLine("Child class called");
 
 /**/  //Lesson24
       // Difference between method overriding and method hiding in c#
-      /*
+        /*
     class BaseClass
     {
         public virtual void Print()
@@ -1285,7 +1341,7 @@ Console.WriteLine("Child class called");
 
 /**/  //Lesson26
       // Why properties in c#
-      /*
+        /*
         class Student
     {
        int _studentID;
@@ -1336,7 +1392,7 @@ Console.WriteLine("Child class called");
 /**/  //Lesson27
       //properties in c# with SET and GET methods (SET and GET proberties)
 
-/*
+        /*
 class Student
 {   string _name;
 int _passmark = 35;
@@ -1387,7 +1443,7 @@ public string Email { get; set; }
 /**/  //Lesson28
       // Structs in c# 
 
-/*
+        /*
 public struct Customer
 {
 // fields
@@ -1442,7 +1498,7 @@ Console.WriteLine("Customer ID :{0}, Name: {1}", this._id, this._name);
 /**/  //Lesson29
       //  Difference between classes and structs in c# 
 
-/*
+        /*
 public class Customer
 {
 public int Id { get; set; }
@@ -1453,7 +1509,7 @@ public string Name { get; set; }
 
 /**/  //Lesson30
       //  Interfaces in c# 
-      /*
+        /*
     interface ICustomer1
     {
         // no implementation , just a declaration 
@@ -1487,7 +1543,7 @@ public string Name { get; set; }
 
 /**/  //Lesson31
       // Interface implementation in c# - using EXPLICIT INTERFACE IMPLEMNTATION
-      /*
+        /*
           interface I1
       {
           void InterfaceMethod();
@@ -1534,7 +1590,7 @@ public string Name { get; set; }
 /**/  //Lesson32
       //  Abstract classes in c# 
 
-/*
+        /*
 // abstract class is used as base class which can be inherited from other classes
 // abstract class is incomplete and can not be instantiated 
 // abstract = base class => can not be sealed(can not be inherited)
@@ -1567,7 +1623,7 @@ Console.WriteLine("Print from shop class");
 /**/  //Lesson33
       //  Difference between abstract classes and interfaces in c# 
 
-/*
+        /*
 abstract class customer : Icustomer, Ishope
 {
 //1. Abstract class can have an implemntation for some of its members while interface can not have implementation to any of its memebers 
@@ -1617,7 +1673,7 @@ void draw();
 /**/  //Lesson34
       //  Problems of multiple class inheritance in c# 
 
-/*
+        /*
 // This can cause an ambguity "DIAMOND PROBLEM"
 class A
 {
@@ -1654,7 +1710,7 @@ class D : B,C
 /**/  //Lesson35
       //  Multiple class inheritance using interfaces in c# 
 
-/*
+        /*
 interface AI
 {
 void MethodA();
@@ -1709,23 +1765,23 @@ public void MethodB()
 /**/  //Lesson36
       //  Delegates in c# 
 
-/*
+        /*
 public delegate void HelloDelgate(string Message);
 */
 
 /**/  //Lesson36
       //  Delegates usage in c# PART 1
-
-// All files needed is located under
-// LearningCsharp\lesson 37
-
+        /*
+        // All files needed is located under
+        // LearningCsharp\lesson 37
+        */
 
 /**/  //Lesson37
       //  Delegates usage in c# PART 2
-
-// All files needed is located under
-// LearningCsharp\lesson 38
-
+        /*
+        // All files needed is located under
+        // LearningCsharp\lesson 38
+        */
 
 /**/  //Lesson30
       //  Interfaces in c# 
